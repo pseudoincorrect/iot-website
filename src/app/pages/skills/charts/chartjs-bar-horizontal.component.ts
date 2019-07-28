@@ -79,8 +79,4 @@ export class ChartjsBarHorizontalComponent implements OnDestroy {
   ngOnDestroy(): void {
     this.themeSubscription.unsubscribe();
   }
-
-  private random() {
-    return Math.round(Math.random() * 100);
-  }
 }
