@@ -1,0 +1,92 @@
+@import '../../../@theme/styles/themes.scss';
+
+@include nb-install-component() {
+
+  nb-card-body {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .picture {
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    border-top-left-radius: nb-theme(border-radius);
+    border-top-right-radius: nb-theme(border-radius);
+    flex: 1;
+  }
+
+  .details {
+    padding: 1.25rem 1.25rem 0;
+    text-align: justify;
+    text-justify: inter-word;
+
+    .title {
+      font-family: nb-theme(font-family-secondary);
+      font-weight: nb-theme(text-heading-2-font-weight);
+      color: nb-theme(text-alternate-color);
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      text-align: left;
+
+      @include nb-for-theme(cosmic) {
+        font-weight: nb-theme(text-heading-3-font-weight);
+      }
+    }
+
+    .description {
+      text-align: justify;
+      color: nb-theme(text-control-color);
+      font-weight: nb-theme(text-heading-3-font-weight);
+
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  nb-card-footer {
+    display: flex;
+    justify-content: space-around;
+    padding: 0.75rem 0;
+    border: none;
+
+    a {
+      text-decoration: none;
+      color: nb-theme(text-basic-color);
+
+      &:hover {
+        color: nb-theme(text-alternate-color);
+      }
+
+      i {
+        font-size: 1.75rem;
+      }
+    }
+  }
+
+  .mainPict {
+    max-width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
+  .img-accord {
+    border-radius: 10px;
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  .ng-template-fixed {
+    width: auto;
+    height: 500px;
+    max-height: 500px;
+    object-fit: cover;
+    overflow: hidden;
+
+  }
+
+  .accordion-header {
+    color: nb-theme(color-success-500);
+  }
+}

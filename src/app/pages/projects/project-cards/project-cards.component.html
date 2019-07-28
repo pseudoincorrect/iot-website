@@ -1,0 +1,97 @@
+<div *ngIf="projects">
+  <div class="row">
+
+    <div class="col">
+      <div *ngFor="let project of projects.projects, let even = even" class="">
+        <nb-card *ngIf="even">
+          <nb-card-body>
+            <img class="card-img-top mainPict" src="{{project.mainPicture}}" alt="Card image cap">
+            <div class="details">
+              <div class="title">
+                <div [innerHTML]="project.title"></div>
+              </div>
+              <div class="description">
+                <div [innerHTML]="project.summary"></div>
+              </div>
+              <div class="accordions-container row">
+                <div class="accordion-container">
+                  <nb-accordion>
+                    <nb-accordion-item>
+                      <nb-accordion-item-header class="accordion-header">
+                        <b>More Details...</b>
+                      </nb-accordion-item-header>
+                      <nb-accordion-item-body>
+                        <div [innerHTML]="project.details"></div>
+                        <br> <br>
+                        <ngb-carousel style="outline: none">
+                          <ng-template *ngFor="let pictPath of project.pictures; let i = index" ngbSlide>
+                            <div class="text-center ng-template-fixed">
+                              <img class="img-accord" src="{{pictPath}}" alt="image {{i}}">
+                            </div>
+                          </ng-template>
+                        </ngb-carousel>
+                      </nb-accordion-item-body>
+                    </nb-accordion-item>
+                  </nb-accordion>
+                </div>
+              </div>
+            </div>
+          </nb-card-body>
+          <nb-card-footer style="padding-left:10px;">
+            <div style="width:100%">
+              <p>{{project.location}}, {{project.date}}</p>
+              <p>{{project.tags}}</p>
+            </div>
+          </nb-card-footer>
+        </nb-card>
+      </div> <!-- *ngFor -->
+    </div> <!-- col -->
+
+    <div class="col">
+      <div *ngFor="let project of projects.projects, let even = even" class="">
+        <nb-card *ngIf="!even">
+          <nb-card-body>
+            <img class="card-img-top mainPict" src="{{project.mainPicture}}" alt="Card image cap">
+            <div class="details">
+              <div class="title">
+                <div [innerHTML]="project.title"></div>
+              </div>
+              <div class="description">
+                <div [innerHTML]="project.summary"></div>
+              </div>
+              <div class="accordions-container row">
+                <div class="accordion-container">
+                  <nb-accordion>
+                    <nb-accordion-item>
+                      <nb-accordion-item-header class="accordion-header">
+                        <b>More Details...</b>
+                      </nb-accordion-item-header>
+                      <nb-accordion-item-body>
+                        <div [innerHTML]="project.details"></div>
+                        <br> <br>
+                        <ngb-carousel style="outline: none">
+                          <ng-template *ngFor="let pictPath of project.pictures; let i = index" ngbSlide>
+                            <div class="text-center ng-template-fixed">
+                              <img class="img-accord" src="{{pictPath}}" alt="image {{i}}">
+                            </div>
+                          </ng-template>
+                        </ngb-carousel>
+                      </nb-accordion-item-body>
+                    </nb-accordion-item>
+                  </nb-accordion>
+                </div>
+              </div>
+            </div>
+          </nb-card-body>
+          <nb-card-footer style="padding-left:10px;">
+            <div style="width:100%">
+              <p>{{project.location}}, {{project.date}}</p>
+              <p>{{project.tags}}</p>
+            </div>
+          </nb-card-footer>
+        </nb-card>
+      </div> <!-- *ngFor -->
+    </div> <!-- col -->
+
+  </div> <!-- row -->
+</div> <!-- *ngIf projects -->
