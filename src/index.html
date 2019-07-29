@@ -61,13 +61,13 @@
         transform: translate3d(0, 0, 0);
         animation: spin 2s linear infinite;
       }
-      .spinner div:first-child:after,
-      .spinner div:first-child:before {
-        content: "";
+      .spinner div:first-child::after,
+      .spinner div:first-child::before {
+        content: '';
         position: absolute;
         border-radius: 50%;
       }
-      .spinner div:first-child:before {
+      .spinner div:first-child::before {
         top: 5px;
         left: 5px;
         right: 5px;
@@ -76,7 +76,7 @@
         -webkit-animation: spin 3s linear infinite;
         animation: spin 3s linear infinite;
       }
-      .spinner div:first-child:after {
+      .spinner div:first-child::after {
         top: 15px;
         left: 15px;
         right: 15px;

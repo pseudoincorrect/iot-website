@@ -1,3 +1,4 @@
+import { CollapseSidebarService } from './@core/utils/collapse-sidebar.service';
 /**
  * @license
  * Copyright Akveo. All Rights Reserved.
@@ -8,14 +9,16 @@ import { AnalyticsService } from './@core/utils/analytics.service';
 
 @Component({
   selector: 'ngx-app',
-  template: '<router-outlet></router-outlet>',
+  template: '<router-outlet></router-outlet>'
 })
 export class AppComponent implements OnInit {
-
-  constructor(private analytics: AnalyticsService) {
-  }
+  constructor(
+    private collapseSidebarService: CollapseSidebarService,
+    private analytics: AnalyticsService
+  ) {}
 
   ngOnInit(): void {
+    this.collapseSidebarService.init();
     this.analytics.trackPageViews();
   }
 }
