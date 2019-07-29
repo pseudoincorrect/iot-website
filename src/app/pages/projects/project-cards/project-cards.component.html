@@ -24,7 +24,7 @@
                       <nb-accordion-item-body>
                         <div [innerHTML]="project.details"></div>
                         <br> <br>
-                        <ngb-carousel style="outline: none">
+                        <ngb-carousel style="outline: none" interval="2500">
                           <ng-template *ngFor="let pictPath of project.pictures; let i = index" ngbSlide>
                             <div class="text-center ng-template-fixed">
                               <img class="img-accord" src="{{pictPath}}" alt="image {{i}}">
