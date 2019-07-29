@@ -1,175 +1,172 @@
 {
-    "projects": 
-    [
-        {
-            "title": "Mesh Enabled Health Monitoring Application<br>(Hardware and Full Stack application)",
-            "mainPicture": "assets/projects_assets/mesh/architecture.png",
-            "summary": "<h5>How can we monitor the health status of a large group of individual over a large area with low budget, easily deployable solution ?</h5><p>Along with Nerd (the rat brain implant), <strong>this project is part of my most ambitious ones</strong>. It took place in a research project aiming at predicting the hydration level of multiple persons with a low-cost, low power and easily scalable system. In the context of the World Cup Happening in Qatar in 2022, the Qatari government encouraged the emergence of projects, that aimed to an increase of the well-being of the construction employees working outdoor, sometime under high temperatures and humidity conditions. One of the answer we came up with, was to <strong>provide a low-budget, long range monitoring system for these particular persons, based on wireless mesh network</strong>.</p>",
-            "details": "<h3><strong> Now, for the practical part: </strong></h3><p>We are developing a custom wrist-mounted device, RF enabled, that integrates into a low-power Mesh network ( <strong> OpenThread </strong> ). All Bio data are sent to our server hosting a <strong> full stack application </strong> (backend/database and front end). This <strong> system is easily scalable </strong> so hundreds of companies can monitor the health status of hundreds of their employees.&nbsp;</p><h3><br /> <strong> Overall Behavior and Hierarchy of the system:</strong><strong>&nbsp;&nbsp;</strong></h3><p><strong>Each person is wearing a custom smart wristwatch </strong> that contains essentially two <strong> temperature sensors </strong> (on for the skin and one for the ambient temperature, one <strong> hear rate / oximetry sensor </strong> (oxygen level), and one <strong> dehydration sensor </strong> (that is still under development with our research team). Each of these devices is transmitting and listening data from the RF low-power network they are authenticated to, at regular intervals. The network is created by a set of routers that relay the sensor data to a gateway, which is a router connected to a board computer with an internet access. This <strong> RF mesh network protocol </strong> is the <strong> OpenThread </strong> implementation, for low-power, (relatively) high bandwidth and latency, and robustness. This Gateway, send data to our <strong> backend application, hosted online </strong> , with a by <strong> directional communication </strong> . That way, our server online can received and send data to each node. Finally we designed a frontend application (website) that can display all of these data and control the overall behavior of the system. Moreover, this system integrate user authentication, meaning that we can easily scale this system up, so that many different company can have their own sets of wristwatch/routers/gateway and access their data online, securely, as we are using the latest security technologies, both for the online server, the mesh network and the hardware.&nbsp;</p><h3><br /> <strong> The breakdown of the project's components (and codes):&nbsp; </strong></h3><ul><li><strong> Wrist-mounted device </strong> (wristwatch), containing sensors and wireless chip for the mesh network communication, battery powered, with a firmware written in C. This system is custom made by our team, which concerns both the Printed Circuit Board (PCB) and the wristwatch bracelet (3D printed with hard and soft materials).&nbsp;</li><li><strong> Mesh Router device </strong> (plugged to a wall socket) containing a wireless chip with a power amplifier (firmware written in C as well). This system is also custom made (PCB, and 3D printed case).&nbsp;</li><li><strong> Mesh Gateway device </strong> with the same component as the Router above; it role is entirely different as It is the interface between our mesh network and the single board computer, with which they communicate via a serial connection (C programming).&nbsp;</li><li><strong> Gateway device </strong> , which is a single board computer running a NodeJS daemon program, which make the link between our full-stack application and the Mesh network (JavaScript).&nbsp;</li><li><strong> Backend server application </strong> , Which consists into a REST API coupled with a Database. We used NodeJS with Express and MongoDB. This application was written in JavaScript.&nbsp;</li><li><strong> Frontend Application </strong> (hosted by the backend server) that uses the Angular framework (Typescript/ JavaScript).&nbsp; <br /> The 6 above parts are 6 independents programs and physical devices (except for the frontend application and backend server that are run on online servers).&nbsp;</li></ul>",
-            "pictures": [
-                "assets/projects_assets/mesh/gui1.png",
-                "assets/projects_assets/mesh/gui2.png",
-                "assets/projects_assets/mesh/gui3.png",
-                "assets/projects_assets/mesh/pcb.png",
-                "assets/projects_assets/mesh/pcb_dev.png"
-            ],
-            "tags": "Open Thread Mesh, Full-Stack Application, C programming, JavaScript, PCB design, Deployment",
-            "location": "HBKU, Doha, Qatar",
-            "date": "2018"
-        },
-        {
-            "title": "Bluetooth Health Status Monitory (with GUI)",
-            "mainPicture": "assets/projects_assets/bluetoothHealth/pcb_hand.jpg",
-            "summary": "<h5>How to monitor and display the health status of multiple persons in a room in a star configuration with a light weight, low power wearable device ?</h5><p><br /> This project is the previous Version of the Mesh enabled health monitoring system. The technologies used are so different that it has its place among my major projects. The goal is similar but on a much reduced scale as we opted for a<strong> star topology where all nodes were connected to a central PC with Python GUI (PyQt)</strong>, supporting <strong>multithreads</strong> for all I/O (inputs outputs) operations.</p>",
-            "details": "<h5>The aim of this project is to create a system that could be worn by each of the workers and transmit its sensor data to a base station located in the room.</h5><p>We therefore used the Bluetooth 4.2 (BLE) protocol in a star topology with a base station being a computer for display and storage.</p><p>The embedded system consisted into a Nordic Semiconductor wireless MCU along power supply/management, vibration motor, LED and a FFC connector to connect multiple sensors. The base station connected to the PC was containing the same Nordic Semi chip along with a UART/USB interfacing chip. The data were then displayed on the PC. By the architecture of our system, we could connect as many node to the base station as the Bluetooth bandwidth would allow, which represents hundreds of nodes, as each node only transmit few times per minutes (which is selectable). The system is bidirectional, meaning that the Base station could send notifications/warning to the embedded system and vice versa. We designed the<strong> PCB with Eagle (Cadsoft)</strong> and made it manufactured in China, soldered in Qatar by ourselves. The code was made in C with Segger Embedded Studio. The <strong>Graphical application</strong> was written in <strong>Python with PyQt for a quick prototyping</strong>.</p><p><strong>Code available on:&nbsp;<a href=\"https://github.com/pseudoincorrect/Dehydration\">Github</a>&nbsp;</strong></p>",
-            "pictures": [
-                "assets/projects_assets/bluetoothHealth/pcb_gui.jpg",
-                "assets/projects_assets/bluetoothHealth/pcb.jpg",
-                "assets/projects_assets/bluetoothHealth/gui.jpg",
-                "assets/projects_assets/bluetoothHealth/wearable.jpg",
-                "assets/projects_assets/bluetoothHealth/cad.png"
-            ],
-            "tags": "C programming, Python GUI, multithreading, smart clothes, PCB design, Bluetooth",
-            "location": "HBKU, Doha, Qatar",
-            "date": "2017"
-        },
-        {
-            "title": "Electronic Laboratory Management",
-            "mainPicture": "assets/projects_assets/lab/lab1.jpg",
-            "summary": "<h5>A part of my position as IoT engineer and Laboratory Manager was to set-up and is to take care of the laboratory of our (Computing Sciences) division. The current laboratory include 29 workstations. The principle manipulations and workstation themes are the following ones:</h5><ul><li>Soldering, Reworking and reflowing</li><li>PCB manufacturing with a laser CNC</li><li>Inkjet printing for smart wearables (conductive ink printing on diverse fabrics)</li><li>Low frequency signal characterization (Oscilloscope, LRC, Source meter, &hellip;)</li><li>High frequency signals characterization (RF analyzer, function generation, Logic analyze, &hellip;)</li><li>General purpose/teaching electronic workstations</li><li>Visible light communication manipulation</li><li>Software Defined Network manipulation</li><li>Eyes tracking devices manipulation</li><li>Healthcare platform development</li><li>Engineering lab part with mechanical tools</li><li>CNC and 3D printers</li><li>Electronic consumables selection and storage</li><li>Non-hazardous chemical storage</li></ul>",
-            "details": "<p>Regarding most of these workstations, manipulations and consumables we <strong>designed all the technical specifications</strong> in term of our projects needs but also in terms of <strong>safety</strong>, <strong>storage</strong> and <strong>maintenance</strong>. This helped me significantly to develop my <strong>organization skills, my human contact with the different actor involved in laboratory management</strong> and my knowledge about the state of the market for the electronic machinery and consumables. In term of my work schedule and achievement, The set-up of the lab was time consuming only for <strong>6 months during the design and set-up of the lab</strong> in collaboration with our Facility management team, the safety team and our procurement team that leveraged the administrative work, leaving us only the <strong>essential technical work to do</strong>. For the two and half following years, I only assisted on critical issues and seldom set-up of new machinery.</p>",
-            "pictures": [
-                "assets/projects_assets/lab/lab2.jpg",
-                "assets/projects_assets/lab/lab1.jpg"
-            ],
-            "tags": "Laboratory, Management, Electronic, Safety",
-            "location": "HBKU, Doha, Qatar",
-            "date": "2016 to now"
-        },
-        {
-            "title": "7 Various projects <br> (College of Science and Engineering)",
-            "mainPicture": "assets/projects_assets/ledPump/line_digital.jpg",
-            "summary": "<h5>During my career of IoT engineer and Laboratory Manager, I participated to various students and researcher projects. Thereafter is a highlight of the projects that I worked on, with a major or total contribution.&nbsp;</h5><ul><li>Python Web Crawler</li><li>Controlled LED panel</li><li>Automated pumping system</li><li>Line following robot with TTL logic</li><li>Line following robot with Arm Microcontroller</li><li>Bluetooth BLE connection for remote sensors</li><li>Smart composter design only</li></ul>",
-            "details": "<h5>Python Web Crawler</h5><p>For this project, I designed a web crawler used to collect the data of our ERP system, sort them and gather them into a spreadsheet. This program was mainly using Selenium, a browser controller library used to automate test but not only. The goal was to automate a repetitive task that slowed down our division work in term of material resources management.&nbsp;</p><h5>Controlled LED panel</h5><p>In the context of sustainable energy development. A Research set up a protocol to analyze the different reaction of bacterial solution exposed to light with multiple wavelength. For this reason, we designed a rectangular paned including LEDs, controller, and microcontroller and power supply</p><h5>Automated pumping system</h5><p>One of our college experimentation implied that solution rich in nitrate was injected at regular intervals into a larger bacterial solution. To do so, we (rapidly) developed a systems controlling our pump and displaying the necessary information on a screen.</p><h5>Line following robot with TTL logic</h5><p>In order to introduce our undergrads students to Digital Systems and Electronic, we build a set&nbsp; of lab around a line following robot. In my particular case, I designed the robot out of TTL logic components and light emitter/receiver sensor (Led and photodiode).</p><h5>Line following robot with Arm Microcontroller</h5><p>Although this project looks like the one above, I set up a race competition for high school student during our University holiday to introduce them happily to Computer Sciences. Thus I built with them around 15 line following robot, this time controlled by a Microcontroller (MCU) in order to simplify the implementation (and keep them interested). For this we used 3 different MCU technologies: STM32, and Arduino.</p><h5>Bluetooth BLE connection for remote sensors and python logger</h5><p>For this project a student wanted help on how to link sensors to a computer wirelessly and without much complexity. Therefore we headed to an Arduino + serial Bluetooth connection with a simple python script to log data on a computer.</p><h5>Smart composter design only</h5><p>The goal of this project was to design a &ldquo;smart composter&rdquo; that would be used to monitor the degradation of alimentary product. It consisted mainly into linking sensor to a data logger, and to control the composter in term of temperature, humidity (by injecting water) and rotating a helix to move the processed food inside the composter, the student is currently implementing our solution.</p>",
-            "pictures": [
-                "assets/projects_assets/ledPump/line_mcu.jpg",
-                "assets/projects_assets/ledPump/pump.jpg",
-                "assets/projects_assets/ledPump/se.png"
+  "projects": [{
+      "title": "Mesh Enabled Health Monitoring Application<br>(Hardware and Full Stack application)",
+      "mainPicture": "assets/projects_assets/mesh/architecture.png",
+      "summary": "<i>How can we monitor the health status of a large group of individual over a large area with low budget, easily deployable solution ? <br><br></i><p>Along with Nerd (the rat brain implant), <b>this project is part of my most ambitious ones</b>. It took place in a research project aiming at predicting the hydration level of multiple persons with a low-cost, low power and easily scalable system. In the context of the World Cup Happening in Qatar in 2022, the Qatari government encouraged the emergence of projects, that aimed to an increase of the well-being of the construction employees working outdoor, sometime under high temperatures and humidity conditions. One of the answer we came up with, was to <b>provide a low-budget, long range monitoring system for these particular persons, based on wireless mesh network</b>.</p>",
+      "details": "<em><b> Now, for the practical part: </b></em><p>We are developing a custom wrist-mounted device, RF enabled, that integrates into a low-power Mesh network ( <b> OpenThread </b> ). All Bio data are sent to our server hosting a <b> full stack application </b> (backend/database and front end). This <b> system is easily scalable </b> so hundreds of companies can monitor the health status of hundreds of their employees.&nbsp;</p><em><br /> <b> Overall Behavior and Hierarchy of the system:</b><b>&nbsp;&nbsp;</b></em><p><b>Each person is wearing a custom smart wristwatch </b> that contains essentially two <b> temperature sensors </b> (on for the skin and one for the ambient temperature, one <b> hear rate / oximetry sensor </b> (oxygen level), and one <b> dehydration sensor </b> (that is still under development with our research team). Each of these devices is transmitting and listening data from the RF low-power network they are authenticated to, at regular intervals. The network is created by a set of routers that relay the sensor data to a gateway, which is a router connected to a board computer with an internet access. This <b> RF mesh network protocol </b> is the <b> OpenThread </b> implementation, for low-power, (relatively) high bandwidth and latency, and robustness. This Gateway, send data to our <b> backend application, hosted online </b> , with a by <b> directional communication </b> . That way, our server online can received and send data to each node. Finally we designed a frontend application (website) that can display all of these data and control the overall behavior of the system. Moreover, this system integrate user authentication, meaning that we can easily scale this system up, so that many different company can have their own sets of wristwatch/routers/gateway and access their data online, securely, as we are using the latest security technologies, both for the online server, the mesh network and the hardware.&nbsp;</p><em><br /> <b> The breakdown of the project's components (and codes):&nbsp; </b></em><ul><li><b> Wrist-mounted device </b> (wristwatch), containing sensors and wireless chip for the mesh network communication, battery powered, with a firmware written in C. This system is custom made by our team, which concerns both the Printed Circuit Board (PCB) and the wristwatch bracelet (3D printed with hard and soft materials).&nbsp;</li><li><b> Mesh Router device </b> (plugged to a wall socket) containing a wireless chip with a power amplifier (firmware written in C as well). This system is also custom made (PCB, and 3D printed case).&nbsp;</li><li><b> Mesh Gateway device </b> with the same component as the Router above; it role is entirely different as It is the interface between our mesh network and the single board computer, with which they communicate via a serial connection (C programming).&nbsp;</li><li><b> Gateway device </b> , which is a single board computer running a NodeJS daemon program, which make the link between our full-stack application and the Mesh network (JavaScript).&nbsp;</li><li><b> Backend server application </b> , Which consists into a REST API coupled with a Database. We used NodeJS with Express and MongoDB. This application was written in JavaScript.&nbsp;</li><li><b> Frontend Application </b> (hosted by the backend server) that uses the Angular framework (Typescript/ JavaScript).&nbsp; <br /> The 6 above parts are 6 independents programs and physical devices (except for the frontend application and backend server that are run on online servers).&nbsp;</li></ul>",
+      "pictures": [
+        "assets/projects_assets/mesh/gui1.png",
+        "assets/projects_assets/mesh/gui2.png",
+        "assets/projects_assets/mesh/gui3.png",
+        "assets/projects_assets/mesh/pcb.png",
+        "assets/projects_assets/mesh/pcb_dev.png"
+      ],
+      "tags": "Open Thread Mesh, Full-Stack Application, C programming, JavaScript, PCB design, Deployment",
+      "location": "HBKU, Doha, Qatar",
+      "date": "2018"
+    },
+    {
+      "title": "Bluetooth Health Status Monitory (with GUI)",
+      "mainPicture": "assets/projects_assets/bluetoothHealth/pcb_hand.jpg",
+      "summary": "<i>How to monitor and display the health status of multiple persons in a room in a star configuration with a light weight, low power wearable device ?</i><p><br /> This project is the previous Version of the Mesh enabled health monitoring system. The technologies used are so different that it has its place among my major projects. The goal is similar but on a much reduced scale as we opted for a<b> star topology where all nodes were connected to a central PC with Python GUI (PyQt)</b>, supporting <b>multithreads</b> for all I/O (inputs outputs) operations.</p>",
+      "details": "<i>The aim of this project is to create a system that could be worn by each of the workers and transmit its sensor data to a base station located in the room.</i><p>We therefore used the Bluetooth 4.2 (BLE) protocol in a star topology with a base station being a computer for display and storage.</p><p>The embedded system consisted into a Nordic Semiconductor wireless MCU along power supply/management, vibration motor, LED and a FFC connector to connect multiple sensors. The base station connected to the PC was containing the same Nordic Semi chip along with a UART/USB interfacing chip. The data were then displayed on the PC. By the architecture of our system, we could connect as many node to the base station as the Bluetooth bandwidth would allow, which represents hundreds of nodes, as each node only transmit few times per minutes (which is selectable). The system is bidirectional, meaning that the Base station could send notifications/warning to the embedded system and vice versa. We designed the<b> PCB with Eagle (Cadsoft)</b> and made it manufactured in China, soldered in Qatar by ourselves. The code was made in C with Segger Embedded Studio. The <b>Graphical application</b> was written in <b>Python with PyQt for a quick prototyping</b>.</p><p><b>Code available on:&nbsp;<a href=\"https://github.com/pseudoincorrect/Dehydration\">Github</a>&nbsp;</b></p>",
+      "pictures": [
+        "assets/projects_assets/bluetoothHealth/pcb_gui.jpg",
+        "assets/projects_assets/bluetoothHealth/pcb.jpg",
+        "assets/projects_assets/bluetoothHealth/gui.jpg",
+        "assets/projects_assets/bluetoothHealth/wearable.jpg",
+        "assets/projects_assets/bluetoothHealth/cad.png"
+      ],
+      "tags": "C programming, Python GUI, multithreading, smart clothes, PCB design, Bluetooth",
+      "location": "HBKU, Doha, Qatar",
+      "date": "2017"
+    },
+    {
+      "title": "Electronic Laboratory Management",
+      "mainPicture": "assets/projects_assets/lab/lab1.jpg",
+      "summary": "A part of my position as IoT engineer and Laboratory Manager was to set-up and is to take care of the laboratory of our (Computing Sciences) division. The current laboratory include 29 workstations. The principle manipulations and workstation themes are the following ones:<br><br><ul><li>Soldering, Reworking and reflowing</li><li>PCB manufacturing with a laser CNC</li><li>Inkjet printing for smart wearables (conductive ink printing on diverse fabrics)</li><li>Low frequency signal characterization (Oscilloscope, LRC, Source meter, &hellip;)</li><li>High frequency signals characterization (RF analyzer, function generation, Logic analyze, &hellip;)</li><li>General purpose/teaching electronic workstations</li><li>Visible light communication manipulation</li><li>Software Defined Network manipulation</li><li>Eyes tracking devices manipulation</li><li>Healthcare platform development</li><li>Engineering lab part with mechanical tools</li><li>CNC and 3D printers</li><li>Electronic consumables selection and storage</li><li>Non-hazardous chemical storage</li></ul>",
+      "details": "<p>Regarding most of these workstations, manipulations and consumables we <b>designed all the technical specifications</b> in term of our projects needs but also in terms of <b>safety</b>, <b>storage</b> and <b>maintenance</b>. This helped me significantly to develop my <b>organization skills, my human contact with the different actor involved in laboratory management</b> and my knowledge about the state of the market for the electronic machinery and consumables. In term of my work schedule and achievement, The set-up of the lab was time consuming only for <b>6 months during the design and set-up of the lab</b> in collaboration with our Facility management team, the safety team and our procurement team that leveraged the administrative work, leaving us only the <b>essential technical work to do</b>. For the two and half following years, I only assisted on critical issues and seldom set-up of new machinery.</p>",
+      "pictures": [
+        "assets/projects_assets/lab/lab2.jpg",
+        "assets/projects_assets/lab/lab1.jpg"
+      ],
+      "tags": "Laboratory, Management, Electronic, Safety",
+      "location": "HBKU, Doha, Qatar",
+      "date": "2016 to now"
+    },
+    {
+      "title": "7 Various projects <br> (College of Science and Engineering)",
+      "mainPicture": "assets/projects_assets/ledPump/line_digital.jpg",
+      "summary": "<i>During my career of IoT engineer and Laboratory Manager, I participated to various students and researcher projects. Thereafter is a highlight of the projects that I worked on, with a major or total contribution.&nbsp;</i><br><br><ul><li>Python Web Crawler</li><li>Controlled LED panel</li><li>Automated pumping system</li><li>Line following robot with TTL logic</li><li>Line following robot with Arm Microcontroller</li><li>Bluetooth BLE connection for remote sensors</li><li>Smart composter design only</li></ul>",
+      "details": "<i>Python Web Crawler</i><p>For this project, I designed a web crawler used to collect the data of our ERP system, sort them and gather them into a spreadsheet. This program was mainly using Selenium, a browser controller library used to automate test but not only. The goal was to automate a repetitive task that slowed down our division work in term of material resources management.&nbsp;</p><i>Controlled LED panel</i><p>In the context of sustainable energy development. A Research set up a protocol to analyze the different reaction of bacterial solution exposed to light with multiple wavelength. For this reason, we designed a rectangular paned including LEDs, controller, and microcontroller and power supply</p><i>Automated pumping system</i><p>One of our college experimentation implied that solution rich in nitrate was injected at regular intervals into a larger bacterial solution. To do so, we (rapidly) developed a systems controlling our pump and displaying the necessary information on a screen.</p><i>Line following robot with TTL logic</i><p>In order to introduce our undergrads students to Digital Systems and Electronic, we build a set&nbsp; of lab around a line following robot. In my particular case, I designed the robot out of TTL logic components and light emitter/receiver sensor (Led and photodiode).</p><i>Line following robot with Arm Microcontroller</i><p>Although this project looks like the one above, I set up a race competition for high school student during our University holiday to introduce them happily to Computer Sciences. Thus I built with them around 15 line following robot, this time controlled by a Microcontroller (MCU) in order to simplify the implementation (and keep them interested). For this we used 3 different MCU technologies: STM32, and Arduino.</p><i>Bluetooth BLE connection for remote sensors and python logger</i><p>For this project a student wanted help on how to link sensors to a computer wirelessly and without much complexity. Therefore we headed to an Arduino + serial Bluetooth connection with a simple python script to log data on a computer.</p><i>Smart composter design only</i><p>The goal of this project was to design a &ldquo;smart composter&rdquo; that would be used to monitor the degradation of alimentary product. It consisted mainly into linking sensor to a data logger, and to control the composter in term of temperature, humidity (by injecting water) and rotating a helix to move the processed food inside the composter, the student is currently implementing our solution.</p>",
+      "pictures": [
+        "assets/projects_assets/ledPump/line_mcu.jpg",
+        "assets/projects_assets/ledPump/pump.jpg",
+        "assets/projects_assets/ledPump/se.png"
 
-            ],
-            "tags": "Rapid Prototyping, Python, TTL logic, Bluetooth, C programming" ,
-            "location": "HBKU, Doha, Qatar",
-            "date": "2016 to now"
-        },
-        {
-            "title": "Laboratories for graduate and PhD students <br>(Digital Systems Design & Computer Architecture)",
-            "mainPicture": "assets/projects_assets/pocsd/de2.jpg",
-            "summary": "<h5>I wrote and taught a set of 5 laboratories exercises for graduate and PhD students of HBKU university.</h5><p>These labs were approaching a various set of subjects regarding <strong>Digital System Design and computer architecture</strong>, such as combinational and sequential logic, finite state machines, pipelining and optimization. This is where I realized that having all the necessary knowledge does not imply that the teaching will be successful. My first semester teaching <strong>this class taught me more than a decade of student and active life</strong> in regard to human relationship.</p>",
-            "details": "<p>Here is the truth: the <strong>first year was not a success with this class</strong>. Even though I was <strong>perfectly skilled on the technical plan</strong>, my teaching method was to be revised. So for the coming year I spent countless of hours training my communication and teaching skills, how to approach people and motivate them to learn; with <strong>books, online classes and lots of practice</strong>. <strong>The results for the next class, were above my expectations</strong>. Students were extremely motivated and stayed late after to continue learning. Overall, this teaching experience was a success and taught me much more than technical skills.</p>",
-            "pictures": [
-                "assets/projects_assets/pocsd/architecture.png",
-                "assets/projects_assets/pocsd/arm.jpg",
-                "assets/projects_assets/pocsd/microelectronics.jpg"
-            ],
-            "tags": "FPGA, Verliog, Block Diagrams, Teaching, Digital Design, Computer Architecture",
-            "location": "HBKU, Doha, Qatar",
-            "date": "2016 to now"
-        },
-        {
-            "title": "FPGA Wifi Link",
-            "mainPicture": "assets/projects_assets/fpgaWifi/fpgaWifi.jpg",
-            "summary": "<h5>How can we send FPGA&rsquo;s data online reliably at a high rate?</h5><p>The purpose of this project is to link a<strong> FPGA connected</strong> to many <strong>sensors</strong> to one of our servers with an <strong>TCP connection through wifi</strong>. We achieved a bandwidth of 8 Mb/sec with the help of SRAM bufferization. For this project, we used development board from Altera (now Intel) and Texas Instrument. The wireless m<strong>icrocontroller firmware and FPGA configuration were written in C and Verilog.</strong></p>",
-            "details": "<p>This application allows for transmitting data from a FPGA to a PC or any <strong>TCP/IP capable device through WiFi</strong> via a wireless enabled MCU (CC3200 from TI), at a rate up to<strong> 8 Mbits/sec</strong>.</p><p>A FPGA receive data from several sensors, store them in memory and transmit them to a Microcontroller (MCU) through a <strong>SPI connection custom (written in verilog)</strong>.</p><p>The MCU first connect itself to an access point (WiFi) and then to a receiving server (in our case a <strong>python program we wrote</strong>).</p><p>Afterward, the MCU starts accepting the SPI data sent from the FPGA and store them in a Buffer. Once the buffer is full enough, the MCU send data to a computer through the TCP/IP protocol.</p><p>Meanwhile, it still receives data from the SPI.</p><p>These parallel processes (SPI reception, TCP transmission) repeat endlessly as long as the (socket) connection between the MCU and the PC stays alive.</p><p>The key point of this project was to create a reliable connection between the FPGA and the MCU as the <strong>MCU often drop the connection with the remote server</strong>. Therefore the <strong>FPGA needed to wait the connection to recover and store the data into a SRAM chip placed on its board.</strong></p><p>Once the project finalized, sources along with a comprehensive user manual were sent to the research team in need for this particular use case.</p><p><strong>Code and user manual available on:&nbsp;&nbsp;<strong><a href=\"https://github.com/pseudoincorrect/FPGA_MCU_wifi\">Github</a></strong></strong></p>",
-            "pictures": [
-                "assets/projects_assets/fpgaWifi/diagram.png",
-                "assets/projects_assets/fpgaWifi/fpgaWifi.jpg"
-            ],
-            "tags": "FPGA, Verilog, WiFi, C programming, Socket Programming, TCP",
-            "location": "HBKU, Doha, Qatar",
-            "date": "2016"
-        },
-        {
-            "title": "Hardware Accelerator Projects (FPGA)",
-            "mainPicture": "assets/projects_assets/fractal/mandelbrot.png",
-            "summary": "<h5>How can I deepen my knowledge of hardware design ?</h5><p>The purpose of these projects were purely educational. For the need of my current job, I needed to <strong>create a set of laboratories</strong> (practical exercises) and teach Digital System Design and Computer Architecture. In order to reach a level I judged satisfying I set myself several goals, took <strong>few advanced classes on the subject (Cornell ECE5760)</strong>. I needed as well to and worked on challenging projects.</p><ul><li>A Cellular Automaton display</li><li>Hardware ODE (Ordinary Differential Equation) solver</li><li>A Sound Generator based on Multiprocessor PDE (&nbsp;partial differential equations) real-time synthesis of a nonlinear drum&nbsp;</li><li>A Mandelbrot set solver</li><li>My final project was the FPGA WiFi link there-above which was part of a research project</li></ul>",
-            "details": "<h5>In most of the case these projects followed these steps:</h5><ul><li>Study of the mathematical and physical problem on which they were based. For instance with the Sound Generator, we needed to understand how to create a mesh of hardware nodes (Finite Element Computation) communicating together and implement the PDE solver</li><li>Making a higher level architecture, involving Multiple Architecture Diagrams</li><li>Making a first implementation with Verilog</li><li>Simulating this implementation on a RTL Simulator, in our case ModelSim</li><li>Optimize the hardware in term of speed and Size</li><li>Implement and test it on the DE2-115 FPGA board</li></ul><p><strong>Code available on:&nbsp;<a href=\"https://github.com/pseudoincorrect/Verilog_Labs_Corn\">Github</a>&nbsp;</strong></p><p>Overall these classes, brought me so much knowledge of Computer Architecture, Digital Design and Hardware acceleration,<strong> I cannot say thank you enough to Bruce Land, Senior Lecturer in Cornell University to make these resources available online.</strong></p>",
-            "pictures": [
-                "assets/projects_assets/fractal/automaton.png",
-                "assets/projects_assets/fractal/mesh.png",
-                "assets/projects_assets/fractal/ddf.png"
-            ],
-            "tags": "FPGA, Hardware Acceleration, Highly Parallelized Systems, Computer Architecture",
-            "location": "HBKU, Doha, Qatar",
-            "date": "2016"
-        },
-        {
-            "title": "NerD (wireless brain computer interface for living rodents)",
-            "mainPicture": "assets/projects_assets/nerd/rat.png",
-            "summary": "<h5>How to design a low-cost open source electrophysiological recording system for living rodent ?</h5><p>We designed this project to address the researchers&rsquo; need for a <strong>low-cost and open source system, needed to acquire brain activity of freely moving rodents</strong>. With the knowledge that almost no low-cost systems are available for researchers to conduct their experiments for brain signal acquisition we decided to put our knowledge in embedded systems and data compression to come up with a competitive system. We then created a<strong> 3 stages PCB</strong> containing an <strong>acquisition/filtering</strong> chip, a <strong>wireless transceiver</strong> and a processor for application and <strong>data compression</strong> in order to sustain a high speed connection (<strong>1,2 Mbit/sec</strong>) while keeping an <strong>battery life of 5 hours</strong> for long experiments. The system was wirelessly linked to a compute through a custom base station and data were displayed/stored thanks to an <strong>opensource software</strong>.</p>",
-            "details": "<h5>Strategy</h5><ul><li>Design of a wireless system for recording the neural activity of a freely moving rat</li><li>Design and implementation of compression algorithm, ADCPM, for the optimization of the bandwidth usage among the wireless neural signal acquisition systems</li></ul><h5>Management</h5><ul><li>Design and management of a workspace for the development of microelectronics systems</li><li>Selection of the tools and components for the development of based-microcontroller systems</li><li>Evaluation of the project costs, within the context of open source development, fast reproducible systems</li><li>The purpose is to offer a non-expensive replacement of industrial existing systems</li></ul><h5>Implementation</h5><p>The initial part of the project was to select the appropriate Microcontroller and wireless transceiver that would reach our specifications. Thus we tests multiple wireless systems: Bluetooth, WIFI, ZigBee, analog RF, Nordic Custom; and microcontroller: Arduino, Mbed, STMicroelectronics, TI. We select the Nordic nrf24L01+ for the wireless part and a STM32F0 for the computing/peripheral unit. We then created our first proto-board, then the PCB. The following was to debug both the hardware of our 3 stages board and its firmware. After a long series of test regarding the bandwidth, transmission loss and battery life, we were ready to test it on living rodents. Once the real data were acquired, we worked on the journal article writing to finally end the project.</p><p><strong>Sources, hardware design files and user manual available on:</strong>&nbsp;<strong><a href=\"https://github.com/pseudoincorrect\">Github</a> (3 Repos with Electropy_ prefix) </strong></p><p><strong>The published journal paper available on:&nbsp;<a href=\"http://iopscience.iop.org/article/10.1088/1741-2552/aaa041\">Journal of Neural Engineering</a>&nbsp;</strong></p>",
-            "pictures": [
-                "assets/projects_assets/nerd/pcb.png",
-                "assets/projects_assets/nerd/system.png",
-                "assets/projects_assets/nerd/rat.png"
-            ],
-            "tags": "OpenSource, Custom Wireless, STM32, nrf24, PCB, C programming",
-            "location": "Loria research institute, Nancy, France",
-            "date": "2015"
-        },
-        {
-            "title": "Wireless Data Sensor Link Integrated to a High Speed Cable Robot",
-            "mainPicture": "assets/projects_assets/moth/pcb.jpg",
-            "summary": "<h5>How can we acquire the muscle (electrophysiological) signals of a moth in flight ?</h5><p>We aimed to study the<strong> flight learning process of</strong> animal such as <strong>moths</strong> during this project. For this purpose we needed to characterizing &nbsp;the <strong>electrophysiological signals in animals muscles</strong> and their response to stimulations such as the detection of<strong> a pheromone</strong> (smelling). All this would help us to get a better grasp on the process of learning, to further enrich the neural network based algorithms in computer science (mainly used in Artificial Intelligence). Thus we created a custom acquisition system composed of a proprietary amplifier and <strong>Analog to Digital converter chip</strong>, a <strong>Bluetooth</strong> transmitter and a microcontroller; as well as a <strong>C++ GUI based on Qt</strong>.</p>",
-            "details": "<h5>In order to complete this project, the following objectives were to be reached</h5><p>&nbsp;</p><p><strong>Design of an autonomous embedded system destined to be placed on a moving robot</strong></p><ul><li>The <strong>system</strong> was to be <strong>light</strong> enough to be transported by a cable robot and resist to strong acceleration. Therefore we reduced the mass of the Printed Circuit Board and used ultra-thin silver wires to connect the system to the animal (moth)</li></ul><p><strong>Acquisition of moth neuromuscular signals to be sent to a computer via Bluetooth</strong></p><ul><li>The system needed to <strong>send the electrophysiological data to a distant computer</strong>. Within our configuration, the use of cable was impossible due to the high speed of the cable robot for which the system was mean to be placed on. We selected <strong>Bluetooth</strong> technology for it reliability, speed matching our requirement, and ease of use. The microcontroller used were from STmicroelectronic and its<strong> firmware was written in C</strong>.</li></ul><p><strong>Design of a graphical application</strong></p><ul><li>Finally we needed to acquire and display the said data on a computer placed across the room as well as sending it data. Thus, we designed a <strong>Qt based graphical application in C++ for this purpose</strong>.</li></ul>",
-            "pictures": [
-                "assets/projects_assets/moth/prototype.jpg",
-                "assets/projects_assets/moth/pcb.jpg"
-            ],
-            "tags": "Mbed, Bluetooth, C/C++ programming, prototyping, GUI design",
-            "location": "HBKU, Doha, Qatar",
-            "date": "2014"
-        },
-        {
-            "title": "Heart Rate sensor and logger",
-            "mainPicture": "assets/projects_assets/heartRate/boardOnly.png",
-            "summary": "<h5>How can we create a custom Heart Rate data logger ?</h5><p>The purpose of this project was to create a <strong>custom hardware and firmware for a Heart Rate data logger</strong>. This was a complete introduction to Printed Circuit Board (PCB) design, soldering, and firmware writing. This is also the project that made me love embedded systems.</p>",
-            "details": "<p>The first challenge was to setup the goals upon what the system would do. Being used to the simplicity of Arduino, we sometimes set unattainable goals regarding embedded system, especially when looking outside of the arduino realm. In here, by the nature of our this project development tools (set by the professor), we were forced to <strong>make a comprehensive analysis of what can be done within a certain time period</strong>. Therefore the idea of heartbeat data logger came into our mind.</p><p>We firstly created a prototype thanks to several development boards. Then we wrote the <strong>firmware</strong>. After this, we designed our <strong>custom PCB</strong> and adapted the firmware. We then made the board manufactured and attempted a first soldering. After quite some hardware and software debugging, the system came to life and with it the end of this project. <strong>The satisfaction to create a system from scratch was almost overwhelming. This is at this moment that I knew I found my path.</strong></p><p>&nbsp;</p>",
-            "pictures": [
-                "assets/projects_assets/heartRate/boardOscillo.png",
-                "assets/projects_assets/heartRate/boardProgrammer.png",
-                "assets/projects_assets/heartRate/boardOnly.png"
-            ],
-            "tags": "NXP, sensor, UART, Custom PCB, C programming",
-            "location": "Lulea University of Technology, Lulea, Sweden ",
-            "date": "2013"
-        },
-        {
-            "title": "Design of a test bench for the Varistart system based on logarithmic gears",
-            "mainPicture": "assets/projects_assets/varistart/system.png",
-            "summary": "<h5>How to test the performances and feasibility of a system based on Logarithmic gearings ?</h5><p>These strange gearing shapes may strike a question: <strong>How do they even rotate without breaking and what do we do with them</strong> ?</p><p>Without going too far in mechanical analytic, we can say that when the<strong> system start</strong>, the overall torque in enormous with a <strong>small speed</strong> (hence easy to rotate) and at the <strong>end of the revolution</strong> of the blue gearing (above), the torque reduces dramatically and provides a<strong> large speed</strong> (hence fast after the start). This ingeniously named system &ldquo;<strong>Varistart</strong>&rdquo; indicate that the torque vary at the start of the system.</p>",
-            "details": "<h5>The purpose of this project was to design a bench test for the Varistart system.&nbsp;</h5><p><strong>We divided this project in 3 parts:</strong></p><p><strong>CAD design of the gears and the bench in which these sat</strong></p><ul><li>We proceeded to design these gearing on Catia CAD and run mechanical simulation and mechanical resistance study in order to obtain a product able to pass our specifications.&nbsp;</li></ul><p><strong>Design of the electronic system used for data acquisition</strong></p><ul><li>We designed a Electronic system needed to acquire the position/speed/acceleration and torque of the system in order to classify its performances. For this design we used Arduino, which was my introduction to embedded systems</li></ul><p><strong>&nbsp;Implementation/manufacture of the whole system</strong></p><ul><li>We used the heavy duty manufacturing machines available in our school to implement the system and test it</li></ul><p><strong>Results</strong>: We did a complete mechanical study of the performance of Varistart which were later used to design several prototypes by the IP owner of this system.</p>",
-            "pictures": [
-                "assets/projects_assets/varistart/gear.png",
-                "assets/projects_assets/varistart/system.png"
-            ],
-            "tags": "Catia, Arduino, Analytical Mechanics, Machining",
-            "location": "ESSTIN, Nancy, France",
-            "date": "2012"
-        },
-        {
-            "title": "Production chain reorganization and Design of an operator workstation",
-            "mainPicture": "assets/projects_assets/flowAnalysis/heavyDuty.png",
-            "summary": "<h5>How can the company named &ldquo;Les Zelles&rdquo; in France improved its production Rate of window frames manufacturing ?</h5><p>This Student project was made in partnership with our School (ESSTIN, in Nancy, France) and<em> Les Zelles</em> (in Cornimont, France). The goal was to <strong>improve the chain process of a manufacturing workstation</strong>. For 6 months, we conducted a medium term study and refactoring of the workflow for this particular workstation involving several <strong>heavy duty machines and 3 operators</strong>.</p>",
-            "details": "<p><strong>We divided this project into 3 parts:</strong></p><p><strong>Preliminary study and data acquisition</strong></p><ul><li>We first became familiar with the company, its employees and the equipment before proceeding to the data acquisition. Secondly we proceed to take physical measurement of the production chains and reported digital with AutoCAD. Then we took time measurement of the various production steps and dead times.</li></ul><p><strong>Data Analysis and refactoring proposal</strong></p><ul><li>The second step was to analyze the data we acquired and proceed to plan different modifications of the workspace. This involved product Flow analysis, financial analysis on the cost of the modification and its benefices. We then proposed our solution to Les Zelles.</li></ul><p><strong>Implementation</strong></p><ul><li>Finally we proceed to the implementation of our accepted solution with the company and reported our work to both Les Zelles and our School.</li></ul><p><strong>Result:&nbsp;</strong>We improved the production rate by 31% (averaging the different productions with small and large series) &nbsp;by refactoring the workstation, involving a gain ~2000 euros per month for the company.</p>",
-            "pictures": [
-                "assets/projects_assets/flowAnalysis/autoCad.png",
-                "assets/projects_assets/flowAnalysis/heavyDuty.png"
-            ],
-            "tags": "Work Flow Analysis, AutoCAD, Financial analysis",
-            "location": "ESSTIN, Nancy, France",
-            "date": "2011"
-        }
-    ]
+      ],
+      "tags": "Rapid Prototyping, Python, TTL logic, Bluetooth, C programming",
+      "location": "HBKU, Doha, Qatar",
+      "date": "2016 to now"
+    },
+    {
+      "title": "Laboratories for graduate and PhD students <br>(Digital Systems Design & Computer Architecture)",
+      "mainPicture": "assets/projects_assets/pocsd/de2.jpg",
+      "summary": "<i>I wrote and taught a set of 5 laboratories exercises for graduate and PhD students of HBKU university.</i><br><br><p>These labs were approaching a various set of subjects regarding <b>Digital System Design and computer architecture</b>, such as combinational and sequential logic, finite state machines, pipelining and optimization. This is where I realized that having all the necessary knowledge does not imply that the teaching will be successful. My first semester teaching <b>this class taught me more than a decade of student and active life</b> in regard to human relationship.</p>",
+      "details": "<p>Here is the truth: the <b>first year was not a success with this class</b>. Even though I was <b>perfectly skilled on the technical plan</b>, my teaching method was to be revised. So for the coming year I spent countless of hours training my communication and teaching skills, how to approach people and motivate them to learn; with <b>books, online classes and lots of practice</b>. <b>The results for the next class, were above my expectations</b>. Students were extremely motivated and stayed late after to continue learning. Overall, this teaching experience was a success and taught me much more than technical skills.</p>",
+      "pictures": [
+        "assets/projects_assets/pocsd/architecture.png",
+        "assets/projects_assets/pocsd/arm.jpg",
+        "assets/projects_assets/pocsd/microelectronics.jpg"
+      ],
+      "tags": "FPGA, Verliog, Block Diagrams, Teaching, Digital Design, Computer Architecture",
+      "location": "HBKU, Doha, Qatar",
+      "date": "2016 to now"
+    },
+    {
+      "title": "FPGA Wifi Link",
+      "mainPicture": "assets/projects_assets/fpgaWifi/fpgaWifi.jpg",
+      "summary": "<i>How can we send FPGA&rsquo;s data online reliably at a high rate?</i><br><br><p>The purpose of this project is to link a<b> FPGA connected</b> to many <b>sensors</b> to one of our servers with an <b>TCP connection through wifi</b>. We achieved a bandwidth of 8 Mb/sec with the help of SRAM bufferization. For this project, we used development board from Altera (now Intel) and Texas Instrument. The wireless m<b>icrocontroller firmware and FPGA configuration were written in C and Verilog.</b></p>",
+      "details": "<p>This application allows for transmitting data from a FPGA to a PC or any <b>TCP/IP capable device through WiFi</b> via a wireless enabled MCU (CC3200 from TI), at a rate up to<b> 8 Mbits/sec</b>.</p><p>A FPGA receive data from several sensors, store them in memory and transmit them to a Microcontroller (MCU) through a <b>SPI connection custom (written in verilog)</b>.</p><p>The MCU first connect itself to an access point (WiFi) and then to a receiving server (in our case a <b>python program we wrote</b>).</p><p>Afterward, the MCU starts accepting the SPI data sent from the FPGA and store them in a Buffer. Once the buffer is full enough, the MCU send data to a computer through the TCP/IP protocol.</p><p>Meanwhile, it still receives data from the SPI.</p><p>These parallel processes (SPI reception, TCP transmission) repeat endlessly as long as the (socket) connection between the MCU and the PC stays alive.</p><p>The key point of this project was to create a reliable connection between the FPGA and the MCU as the <b>MCU often drop the connection with the remote server</b>. Therefore the <b>FPGA needed to wait the connection to recover and store the data into a SRAM chip placed on its board.</b></p><p>Once the project finalized, sources along with a comprehensive user manual were sent to the research team in need for this particular use case.</p><p><b>Code and user manual available on:&nbsp;&nbsp;<b><a href=\"https://github.com/pseudoincorrect/FPGA_MCU_wifi\">Github</a></b></b></p>",
+      "pictures": [
+        "assets/projects_assets/fpgaWifi/diagram.png",
+        "assets/projects_assets/fpgaWifi/fpgaWifi.jpg"
+      ],
+      "tags": "FPGA, Verilog, WiFi, C programming, Socket Programming, TCP",
+      "location": "HBKU, Doha, Qatar",
+      "date": "2016"
+    },
+    {
+      "title": "Hardware Accelerator Projects (FPGA)",
+      "mainPicture": "assets/projects_assets/fractal/mandelbrot.png",
+      "summary": "<i>How can I deepen my knowledge of hardware design ?</i><br><br><p>The purpose of these projects were purely educational. For the need of my current job, I needed to <b>create a set of laboratories</b> (practical exercises) and teach Digital System Design and Computer Architecture. In order to reach a level I judged satisfying I set myself several goals, took <b>few advanced classes on the subject (Cornell ECE5760)</b>. I needed as well to and worked on challenging projects.</p><ul><li>A Cellular Automaton display</li><li>Hardware ODE (Ordinary Differential Equation) solver</li><li>A Sound Generator based on Multiprocessor PDE (&nbsp;partial differential equations) real-time synthesis of a nonlinear drum&nbsp;</li><li>A Mandelbrot set solver</li><li>My final project was the FPGA WiFi link there-above which was part of a research project</li></ul>",
+      "details": "<i>In most of the case these projects followed these steps:</i><ul><li>Study of the mathematical and physical problem on which they were based. For instance with the Sound Generator, we needed to understand how to create a mesh of hardware nodes (Finite Element Computation) communicating together and implement the PDE solver</li><li>Making a higher level architecture, involving Multiple Architecture Diagrams</li><li>Making a first implementation with Verilog</li><li>Simulating this implementation on a RTL Simulator, in our case ModelSim</li><li>Optimize the hardware in term of speed and Size</li><li>Implement and test it on the DE2-115 FPGA board</li></ul><p><b>Code available on:&nbsp;<a href=\"https://github.com/pseudoincorrect/Verilog_Labs_Corn\">Github</a>&nbsp;</b></p><p>Overall these classes, brought me so much knowledge of Computer Architecture, Digital Design and Hardware acceleration,<b> I cannot say thank you enough to Bruce Land, Senior Lecturer in Cornell University to make these resources available online.</b></p>",
+      "pictures": [
+        "assets/projects_assets/fractal/automaton.png",
+        "assets/projects_assets/fractal/mesh.png",
+        "assets/projects_assets/fractal/ddf.png"
+      ],
+      "tags": "FPGA, Hardware Acceleration, Highly Parallelized Systems, Computer Architecture",
+      "location": "HBKU, Doha, Qatar",
+      "date": "2016"
+    },
+    {
+      "title": "NerD (wireless brain computer interface for living rodents)",
+      "mainPicture": "assets/projects_assets/nerd/rat.png",
+      "summary": "<i>How to design a low-cost open source electrophysiological recording system for living rodent ?</i><br><br><p>We designed this project to address the researchers&rsquo; need for a <b>low-cost and open source system, needed to acquire brain activity of freely moving rodents</b>. With the knowledge that almost no low-cost systems are available for researchers to conduct their experiments for brain signal acquisition we decided to put our knowledge in embedded systems and data compression to come up with a competitive system. We then created a<b> 3 stages PCB</b> containing an <b>acquisition/filtering</b> chip, a <b>wireless transceiver</b> and a processor for application and <b>data compression</b> in order to sustain a high speed connection (<b>1,2 Mbit/sec</b>) while keeping an <b>battery life of 5 hours</b> for long experiments. The system was wirelessly linked to a compute through a custom base station and data were displayed/stored thanks to an <b>opensource software</b>.</p>",
+      "details": "<i>Strategy</i><ul><li>Design of a wireless system for recording the neural activity of a freely moving rat</li><li>Design and implementation of compression algorithm, ADCPM, for the optimization of the bandwidth usage among the wireless neural signal acquisition systems</li></ul><i>Management</i><ul><li>Design and management of a workspace for the development of microelectronics systems</li><li>Selection of the tools and components for the development of based-microcontroller systems</li><li>Evaluation of the project costs, within the context of open source development, fast reproducible systems</li><li>The purpose is to offer a non-expensive replacement of industrial existing systems</li></ul><i>Implementation</i><p>The initial part of the project was to select the appropriate Microcontroller and wireless transceiver that would reach our specifications. Thus we tests multiple wireless systems: Bluetooth, WIFI, ZigBee, analog RF, Nordic Custom; and microcontroller: Arduino, Mbed, STMicroelectronics, TI. We select the Nordic nrf24L01+ for the wireless part and a STM32F0 for the computing/peripheral unit. We then created our first proto-board, then the PCB. The following was to debug both the hardware of our 3 stages board and its firmware. After a long series of test regarding the bandwidth, transmission loss and battery life, we were ready to test it on living rodents. Once the real data were acquired, we worked on the journal article writing to finally end the project.</p><p><b>Sources, hardware design files and user manual available on:</b>&nbsp;<b><a href=\"https://github.com/pseudoincorrect\">Github</a> (3 Repos with Electropy_ prefix) </b></p><p><b>The published journal paper available on:&nbsp;<a href=\"http://iopscience.iop.org/article/10.1088/1741-2552/aaa041\">Journal of Neural Engineering</a>&nbsp;</b></p>",
+      "pictures": [
+        "assets/projects_assets/nerd/pcb.png",
+        "assets/projects_assets/nerd/system.png",
+        "assets/projects_assets/nerd/rat.png"
+      ],
+      "tags": "OpenSource, Custom Wireless, STM32, nrf24, PCB, C programming",
+      "location": "Loria research institute, Nancy, France",
+      "date": "2015"
+    },
+    {
+      "title": "Wireless Data Sensor Link Integrated to a High Speed Cable Robot",
+      "mainPicture": "assets/projects_assets/moth/pcb.jpg",
+      "summary": "<i>How can we acquire the muscle (electrophysiological) signals of a moth in flight ?</i><br><br><p>We aimed to study the<b> flight learning process of</b> animal such as <b>moths</b> during this project. For this purpose we needed to characterizing &nbsp;the <b>electrophysiological signals in animals muscles</b> and their response to stimulations such as the detection of<b> a pheromone</b> (smelling). All this would help us to get a better grasp on the process of learning, to further enrich the neural network based algorithms in computer science (mainly used in Artificial Intelligence). Thus we created a custom acquisition system composed of a proprietary amplifier and <b>Analog to Digital converter chip</b>, a <b>Bluetooth</b> transmitter and a microcontroller; as well as a <b>C++ GUI based on Qt</b>.</p>",
+      "details": "<i>In order to complete this project, the following objectives were to be reached</i><p>&nbsp;</p><p><b>Design of an autonomous embedded system destined to be placed on a moving robot</b></p><ul><li>The <b>system</b> was to be <b>light</b> enough to be transported by a cable robot and resist to strong acceleration. Therefore we reduced the mass of the Printed Circuit Board and used ultra-thin silver wires to connect the system to the animal (moth)</li></ul><p><b>Acquisition of moth neuromuscular signals to be sent to a computer via Bluetooth</b></p><ul><li>The system needed to <b>send the electrophysiological data to a distant computer</b>. Within our configuration, the use of cable was impossible due to the high speed of the cable robot for which the system was mean to be placed on. We selected <b>Bluetooth</b> technology for it reliability, speed matching our requirement, and ease of use. The microcontroller used were from STmicroelectronic and its<b> firmware was written in C</b>.</li></ul><p><b>Design of a graphical application</b></p><ul><li>Finally we needed to acquire and display the said data on a computer placed across the room as well as sending it data. Thus, we designed a <b>Qt based graphical application in C++ for this purpose</b>.</li></ul>",
+      "pictures": [
+        "assets/projects_assets/moth/prototype.jpg",
+        "assets/projects_assets/moth/pcb.jpg"
+      ],
+      "tags": "Mbed, Bluetooth, C/C++ programming, prototyping, GUI design",
+      "location": "HBKU, Doha, Qatar",
+      "date": "2014"
+    },
+    {
+      "title": "Heart Rate sensor and logger",
+      "mainPicture": "assets/projects_assets/heartRate/boardOnly.png",
+      "summary": "<i>How can we create a custom Heart Rate data logger ?</i><br><br><p>The purpose of this project was to create a <b>custom hardware and firmware for a Heart Rate data logger</b>. This was a complete introduction to Printed Circuit Board (PCB) design, soldering, and firmware writing. This is also the project that made me love embedded systems.</p>",
+      "details": "<p>The first challenge was to setup the goals upon what the system would do. Being used to the simplicity of Arduino, we sometimes set unattainable goals regarding embedded system, especially when looking outside of the arduino realm. In here, by the nature of our this project development tools (set by the professor), we were forced to <b>make a comprehensive analysis of what can be done within a certain time period</b>. Therefore the idea of heartbeat data logger came into our mind.</p><p>We firstly created a prototype thanks to several development boards. Then we wrote the <b>firmware</b>. After this, we designed our <b>custom PCB</b> and adapted the firmware. We then made the board manufactured and attempted a first soldering. After quite some hardware and software debugging, the system came to life and with it the end of this project. <b>The satisfaction to create a system from scratch was almost overwhelming. This is at this moment that I knew I found my path.</b></p><p>&nbsp;</p>",
+      "pictures": [
+        "assets/projects_assets/heartRate/boardOscillo.png",
+        "assets/projects_assets/heartRate/boardProgrammer.png",
+        "assets/projects_assets/heartRate/boardOnly.png"
+      ],
+      "tags": "NXP, sensor, UART, Custom PCB, C programming",
+      "location": "Lulea University of Technology, Lulea, Sweden ",
+      "date": "2013"
+    },
+    {
+      "title": "Design of a test bench for the Varistart system based on logarithmic gears",
+      "mainPicture": "assets/projects_assets/varistart/system.png",
+      "summary": "<i>Testing the performances and feasibility of a system based on Logarithmic gearings</i><br><br><p>These strange gearing shapes may strike a question: <b>How do they even rotate without breaking and what do we do with them</b> ?</p><p>Without going too far in mechanical analytic, we can say that when the<b> system start</b>, the overall torque in enormous with a <b>small speed</b> (hence easy to rotate) and at the <b>end of the revolution</b> of the blue gearing (above), the torque reduces dramatically and provides a<b> large speed</b> (hence fast after the start). This ingeniously named system &ldquo;<b>Varistart</b>&rdquo; indicate that the torque vary at the start of the system.</p>",
+      "details": "<i>The purpose of this project was to design a bench test for the Varistart system.&nbsp;</i><p><b>We divided this project in 3 parts:</b></p><p><b>CAD design of the gears and the bench in which these sat</b></p><ul><li>We proceeded to design these gearing on Catia CAD and run mechanical simulation and mechanical resistance study in order to obtain a product able to pass our specifications.&nbsp;</li></ul><p><b>Design of the electronic system used for data acquisition</b></p><ul><li>We designed a Electronic system needed to acquire the position/speed/acceleration and torque of the system in order to classify its performances. For this design we used Arduino, which was my introduction to embedded systems</li></ul><p><b>&nbsp;Implementation/manufacture of the whole system</b></p><ul><li>We used the heavy duty manufacturing machines available in our school to implement the system and test it</li></ul><p><b>Results</b>: We did a complete mechanical study of the performance of Varistart which were later used to design several prototypes by the IP owner of this system.</p>",
+      "pictures": [
+        "assets/projects_assets/varistart/gear.png",
+        "assets/projects_assets/varistart/system.png"
+      ],
+      "tags": "Catia, Arduino, Analytical Mechanics, Machining",
+      "location": "ESSTIN, Nancy, France",
+      "date": "2012"
+    },
+    {
+      "title": "Production chain reorganization and Design of an operator workstation",
+      "mainPicture": "assets/projects_assets/flowAnalysis/heavyDuty.png",
+      "summary": "<i>How can the company named &ldquo;Les Zelles&rdquo; in France improved its production Rate of window frames manufacturing ?</i><br><br><p>This Student project was made in partnership with our School (ESSTIN, in Nancy, France) and<em> Les Zelles</em> (in Cornimont, France). The goal was to <b>improve the chain process of a manufacturing workstation</b>. For 6 months, we conducted a medium term study and refactoring of the workflow for this particular workstation involving several <b>heavy duty machines and 3 operators</b>.</p>",
+      "details": "<p><b>We divided this project into 3 parts:</b></p><p><b>Preliminary study and data acquisition</b></p><ul><li>We first became familiar with the company, its employees and the equipment before proceeding to the data acquisition. Secondly we proceed to take physical measurement of the production chains and reported digital with AutoCAD. Then we took time measurement of the various production steps and dead times.</li></ul><p><b>Data Analysis and refactoring proposal</b></p><ul><li>The second step was to analyze the data we acquired and proceed to plan different modifications of the workspace. This involved product Flow analysis, financial analysis on the cost of the modification and its benefices. We then proposed our solution to Les Zelles.</li></ul><p><b>Implementation</b></p><ul><li>Finally we proceed to the implementation of our accepted solution with the company and reported our work to both Les Zelles and our School.</li></ul><p><b>Result:&nbsp;</b>We improved the production rate by 31% (averaging the different productions with small and large series) &nbsp;by refactoring the workstation, involving a gain ~2000 euros per month for the company.</p>",
+      "pictures": [
+        "assets/projects_assets/flowAnalysis/autoCad.png",
+        "assets/projects_assets/flowAnalysis/heavyDuty.png"
+      ],
+      "tags": "Work Flow Analysis, AutoCAD, Financial analysis",
+      "location": "ESSTIN, Nancy, France",
+      "date": "2011"
+    }
+  ]
 
 }
-
