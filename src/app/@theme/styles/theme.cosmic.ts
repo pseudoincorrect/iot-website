@@ -73,40 +73,6 @@ export const COSMIC_THEME = {
       areaBorderColor: baseThemeVariables.border5,
     },
 
-    profitBarAnimationEchart: {
-      textColor: baseThemeVariables.fgText,
-
-      firstAnimationBarColor: baseThemeVariables.primary,
-      secondAnimationBarColor: baseThemeVariables.success,
-
-      splitLineStyleOpacity: '1',
-      splitLineStyleWidth: '1',
-      splitLineStyleColor: baseThemeVariables.border2,
-
-      tooltipTextColor: baseThemeVariables.fgText,
-      tooltipFontWeight: 'normal',
-      tooltipFontSize: '16',
-      tooltipBg: baseThemeVariables.bg,
-      tooltipBorderColor: baseThemeVariables.border2,
-      tooltipBorderWidth: '1',
-      tooltipExtraCss: 'border-radius: 10px; padding: 4px 16px;',
-    },
-
-    trafficBarEchart: {
-      gradientFrom: baseThemeVariables.warningLight,
-      gradientTo: baseThemeVariables.warning,
-      shadow: baseThemeVariables.warningLight,
-      shadowBlur: '5',
-
-      axisTextColor: baseThemeVariables.fgText,
-      axisFontSize: '12',
-
-      tooltipBg: baseThemeVariables.bg,
-      tooltipBorderColor: baseThemeVariables.border2,
-      tooltipExtraCss: 'border-radius: 10px; padding: 4px 16px;',
-      tooltipTextColor: baseThemeVariables.fgText,
-      tooltipFontWeight: 'normal',
-    },
 
     countryOrders: {
       countryBorderColor: baseThemeVariables.border4,
@@ -129,15 +95,6 @@ export const COSMIC_THEME = {
       chartInnerLineColor: baseThemeVariables.bg2,
     },
 
-    echarts: {
-      bg: baseThemeVariables.bg,
-      textColor: baseThemeVariables.fgText,
-      axisLineColor: baseThemeVariables.fgText,
-      splitLineColor: baseThemeVariables.separator,
-      itemHoverShadowColor: 'rgba(0, 0, 0, 0.5)',
-      tooltipBackgroundColor: baseThemeVariables.primary,
-      areaOpacity: '1',
-    },
 
     chartjs: {
       axisLineColor: baseThemeVariables.separator,
