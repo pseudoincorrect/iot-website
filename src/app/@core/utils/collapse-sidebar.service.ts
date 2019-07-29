@@ -1,19 +1,29 @@
 import { Injectable } from '@angular/core';
-import { NbSidebarService } from '@nebular/theme';
+import { NbSidebarService, NbMenuService } from '@nebular/theme';
 
 @Injectable()
 export class CollapseSidebarService {
   private isExpanded: Boolean;
 
-  constructor(private sidebarService: NbSidebarService) {}
+  constructor(
+    private sidebarService: NbSidebarService,
+    private menuService: NbMenuService
+  ) {}
 
   init() {
     this.isExpanded = false;
-    this.sidebarService.onToggle().subscribe(this.onToggleValue.bind(this));
+    this.sidebarService
+      .onToggle()
+      .subscribe(this.onSidebarToggleValue.bind(this));
+    this.menuService.onItemClick().subscribe(this.onMenuItemClick.bind(this));
   }
 
-  onToggleValue(value: { compact: boolean; tag: string }) {
+  onSidebarToggleValue(value: { compact: boolean; tag: string }) {
     this.isExpanded = !this.isExpanded;
+  }
+
+  onMenuItemClick(value: { compact: boolean; tag: string }) {
+    this.collapseSidebar();
   }
 
   public collapseSidebar() {

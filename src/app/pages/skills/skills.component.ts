@@ -7,11 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./skills.component.scss']
 })
 export class SkillsComponent implements OnInit {
-  constructor(private collapseSidebarService: CollapseSidebarService) {}
+  constructor(public collapseSidebarService: CollapseSidebarService) {}
 
   ngOnInit() {}
-
-  public collapseSidebar() {
-    this.collapseSidebarService.collapseSidebar();
-  }
 }
