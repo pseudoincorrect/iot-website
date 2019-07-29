@@ -1,6 +1,7 @@
 @import '../../@theme/styles/themes';
 
 @include nb-install-component() {
+
   ngx-chartjs-pie,
   ngx-chartjs-radar {
     display: block;
@@ -16,7 +17,7 @@
 }
 
 .header {
-    text-align: center;
+  text-align: center;
 }
 
 .footer {
