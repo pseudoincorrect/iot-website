@@ -1,45 +1,44 @@
-<div class="row" (click)="this.collapseSidebarService.collapseSidebar()">
-  <div class="col-md-12">
-    <div class="mx-auto">
-      <ngb-carousel style="outline: none">
-        <ng-template ngbSlide>
-          <div class="text-center ng-template-fixed">
-            <img class="img-accord" src="assets/leisure/guitar.jpg" alt="image pcb" />
-          </div>
-        </ng-template>
-        <ng-template ngbSlide>
-          <div class="text-center ng-template-fixed">
-            <img class="img-accord" src="assets/leisure/MTB.jpg" alt="image pcb" />
-          </div>
-        </ng-template>
-        <ng-template ngbSlide>
-          <div class="text-center ng-template-fixed">
-            <img class="img-accord" src="assets/leisure/travelling.jpg" alt="image pcb" />
-          </div>
-        </ng-template>
-        <ng-template ngbSlide>
-          <div class="text-center ng-template-fixed">
-            <img class="img-accord" src="assets/leisure/reading.jpg" alt="image pcb" />
-          </div>
-        </ng-template>
-        <ng-template ngbSlide>
-          <div class="text-center ng-template-fixed">
-            <img class="img-accord" src="assets/leisure/healthy.jpeg" alt="image pcb" />
-          </div>
-        </ng-template>
-        <ng-template ngbSlide>
-          <div class="text-center ng-template-fixed">
-            <img class="img-accord" src="assets/leisure/hangout.jpg" alt="image pcb" />
-          </div>
-        </ng-template>
-      </ngb-carousel>
-    </div>
-    <br />
-    <br />
-    <nb-card class="mx-auto" style="max-width:700px;text-align:center">
-      <nb-card-footer>
-        Images speak for themselves
-      </nb-card-footer>
-    </nb-card>
+<div
+  class="row justify-content-center"
+  (click)="this.collapseSidebarService.collapseSidebar()"
+>
+  <div class="col-12 col-md-10 col-ld-8 col-xl-8 ">
+    <ngb-carousel style="outline: none;">
+      <ng-template ngbSlide>
+        <div class="text-center ng-template-fixed">
+          <img src="assets/leisure/guitar.jpg" alt="guitar" />
+        </div>
+      </ng-template>
+      <ng-template ngbSlide>
+        <div class="text-center ng-template-fixed">
+          <img src="assets/leisure/MTB.jpg" alt="MTB" />
+        </div>
+      </ng-template>
+      <ng-template ngbSlide>
+        <div class="text-center ng-template-fixed">
+          <img src="assets/leisure/travelling.jpg" alt="travelling" />
+        </div>
+      </ng-template>
+      <ng-template ngbSlide>
+        <div class="text-center ng-template-fixed">
+          <img src="assets/leisure/reading.jpg" alt="reading" />
+        </div>
+      </ng-template>
+      <ng-template ngbSlide>
+        <div class="text-center ng-template-fixed">
+          <img src="assets/leisure/healthy.jpeg" alt="healthy" />
+        </div>
+      </ng-template>
+      <ng-template ngbSlide>
+        <div class="text-center ng-template-fixed">
+          <img src="assets/leisure/hangout.jpg" alt="hangout" />
+        </div>
+      </ng-template>
+    </ngb-carousel>
   </div>
+  <nb-card class="theLabel">
+    <nb-card-body>
+      Images speak for themselves
+    </nb-card-body>
+  </nb-card>
 </div>

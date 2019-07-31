@@ -14,14 +14,14 @@ export class Project {
 }
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: 'root'
 })
 export class ProjectService {
+  constructor(private http: HttpClient) {}
 
-  constructor(private http: HttpClient) { }
-
-  load(): Observable<Project[]> {
-    return this.http
-      .get<Project[]>('assets/projects_assets/projects-data.json');
+  load(): Observable<{ projects: Project[] }> {
+    return this.http.get<{ projects: Project[] }>(
+      'assets/projects_assets/projects-data.json'
+    );
   }
 }

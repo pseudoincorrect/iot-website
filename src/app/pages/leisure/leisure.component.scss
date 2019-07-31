@@ -1,6 +1,15 @@
-.img-accord {
-  width: 100%;
-  //   max-width: 700px;
-  //   max-height: 460px;
-  //   border-radius: 10px
+$theMaxWidth: 700px;
+$theWidth: 68vh;
+
+img {
+  // width: $theWidth;
+  max-width: $theWidth;
+  // object-fit: contain;
+}
+
+.theLabel {
+  margin: 10px;
+  width: $theWidth;
+  max-width: $theMaxWidth;
+  text-align: center;
 }

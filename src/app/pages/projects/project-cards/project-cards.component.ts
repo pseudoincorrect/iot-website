@@ -5,17 +5,18 @@ import { NbThemeService } from '@nebular/theme';
 @Component({
   selector: 'ngx-project-cards',
   templateUrl: './project-cards.component.html',
-  styleUrls: ['./project-cards.component.scss'],
+  styleUrls: ['./project-cards.component.scss']
 })
 export class ProjectCardsComponent implements OnInit, OnDestroy {
-
-  projects: Project[];
+  public projects: Project[];
   JSON: any;
   currentTheme: string;
   themeSubscription: any;
 
-  constructor(private projectService: ProjectService,
-              private themeService: NbThemeService) {
+  constructor(
+    private projectService: ProjectService,
+    private themeService: NbThemeService
+  ) {
     this.themeSubscription = this.themeService.getJsTheme().subscribe(theme => {
       this.currentTheme = theme.name;
     });
@@ -23,10 +24,9 @@ export class ProjectCardsComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
-    this.projectService.load()
-      .subscribe( projects => {
-        this.projects = projects;
-      } );
+    this.projectService.load().subscribe(projects => {
+      this.projects = projects.projects;
+    });
   }
 
   ngOnDestroy() {

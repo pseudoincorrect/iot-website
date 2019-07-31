@@ -48,27 +48,38 @@
     padding: 20px 20px 10px;
   }
 
+  .cardProject {
+    margin-bottom: 5vh;
+  }
+
   .mainPict {
     max-width: 100%;
+    max-height: 500px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+    object-fit: cover;
   }
 
   .img-accord {
     border-radius: 10px;
-    max-width: 100%;
-    // max-height: 50%;
+    height: 100%;
   }
 
   .ng-template-fixed {
     width: auto;
     height: 400px;
-    // max-height: 500px;
     object-fit: cover;
     overflow: hidden;
   }
 
   .accordion-header {
-    color: nb-theme(color-success-500);
+    margin: 0;
+    // padding: 0;
+    background-color: nb-theme(color-primary-600);
+    color: nb-theme(color-basic-100);
+  }
+
+  .accordion-header:hover {
+    background-color: nb-theme(color-primary-500);
   }
 }
