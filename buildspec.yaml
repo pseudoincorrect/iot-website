@@ -2,8 +2,8 @@ version: 0.2
 
 env:
   variables:
-    S3_BUCKET: 'maxime-clement-iot-website'
-APP_NAME: 'maxime-clement-iot-website'
+    S3_BUCKET: 'maximeclement.com'
+APP_NAME: 'maximeclement.com'
 BUILD_ENV: 'prod'
 
 phases:
@@ -31,7 +31,6 @@ phases:
       # Copy dist folder to S3 bucket, As of Angular 6, builds are stored inside an app folder in distribution and not at the root of the dist folder
       - aws s3 cp dist s3://${S3_BUCKET}/${APP_NAME} --recursive
       - echo Build completed on `date`
-
 # artifacts:
 #   files:
 #     - '**/*'
