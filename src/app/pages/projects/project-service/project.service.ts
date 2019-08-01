@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 
 export class Project {
   title: string;
-  mainPicture: string;
+  mainPictures: string[];
   summary: string;
   details: string;
   pictures: string[];
