@@ -5,7 +5,7 @@
   ngx-chartjs-pie,
   ngx-chartjs-radar {
     display: block;
-    height: nb-theme(card-height-medium);
+    // height: nb-theme(card-height-medium);
     width: 100%;
 
     ::ng-deep chart {
@@ -14,12 +14,18 @@
       width: 100%;
     }
   }
-}
 
-.header {
-  text-align: center;
-}
+  .header .footer {
+    text-align: center;
+  }
 
-.footer {
-  text-align: center;
+  // .chartSkills {
+  //   height: nb-theme(card-height-medium);
+  // }
+
+  @media (max-width: 768px) {
+    .chartSkills {
+      height: 800px;
+    }
+  }
 }

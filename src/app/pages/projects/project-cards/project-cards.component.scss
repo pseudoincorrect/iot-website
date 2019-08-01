@@ -68,4 +68,13 @@
   .accordion-header:hover {
     background-color: nb-theme(color-primary-500);
   }
+
+  @media (max-width: 768px) {
+    .img-carousel {
+      margin-top: 10px;
+      width: 95%;
+      height: 200px;
+      object-fit: contain;
+    }
+  }
 }
