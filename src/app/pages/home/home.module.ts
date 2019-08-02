@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
+import {
+  NbCardModule,
+} from '@nebular/theme';
+import { ThemeModule } from '../../@theme/theme.module';
 import { CommonModule } from '@angular/common';
-// import { HomeRoutingModule, routedComponents } from './home-routing.module';
 import { HomeComponent } from './home.component';
 
 @NgModule({
@@ -9,7 +12,8 @@ import { HomeComponent } from './home.component';
   ],
   imports: [
     CommonModule,
-    // HomeRoutingModule
+    ThemeModule,
+    NbCardModule,
   ],
 })
 export class HomeModule { }

@@ -1,0 +1,77 @@
+@import '../../@theme/styles/themes';
+
+@include nb-install-component() {
+
+  .title {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: nb-theme(text-heading-1-font-size);
+  }
+
+  .smallImg {
+    display: none;
+    text-align: center;
+  }
+
+  .bigImg {
+    display: block;
+  }
+
+  .smallImg .mainImg {
+    width: 50%;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2), 0 8px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  .bigImg .mainImg {
+    padding: 0;
+    width: 25%;
+    object-fit: cover;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2), 0 8px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 8px;
+  }
+
+  .bigImg .d-flex {
+    align-content: center;
+  }
+
+  .sign {
+    margin: 15px;
+    font-size: nb-theme(text-heading-1-font-size);
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.2), 4px 4px rgba(0, 0, 0, 0.18);
+  }
+
+  .smallImg .sign {
+    margin: 20px;
+  }
+
+  .bigImg .sign {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    margin: 0;
+  }
+
+  nb-card-body {
+    text-align: center;
+  }
+
+
+  @media (max-width: 768px) {
+
+    .title {
+      font-size: nb-theme(text-heading-5-font-size);
+    }
+
+    .smallImg {
+      display: block;
+    }
+
+    .bigImg {
+      display: none;
+    }
+  }
+
+}

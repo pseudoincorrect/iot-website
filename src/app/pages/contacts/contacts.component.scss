@@ -1,12 +1,10 @@
 @import '../../@theme/styles/themes';
-@import '~bootstrap/scss/mixins/breakpoints';
-@import '~@nebular/theme/styles/global/breakpoints';
 
 @include nb-install-component() {
 
   nb-card-header {
     text-align: center;
-    font-size: nb-theme(text-heading-6-font-size)
+    font-size: nb-theme(text-heading-6-font-size);
   }
 
   nb-card-body {
@@ -17,6 +15,6 @@
   nb-card-footer {
     padding: 40px 20px;
     text-align: center;
-    font-size: nb-theme(text-heading-6-font-size)
+    font-size: nb-theme(text-heading-6-font-size);
   }
 }
