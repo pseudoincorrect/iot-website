@@ -4,7 +4,6 @@
 
   .title {
     text-align: center;
-    margin-bottom: 15px;
     font-size: nb-theme(text-heading-1-font-size);
   }
 
@@ -19,7 +18,7 @@
 
   .smallImg .mainImg {
     width: 50%;
-    object-fit: contain;
+    object-fit: cover;
     border-radius: 8px;
     box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2), 0 8px 20px 0 rgba(0, 0, 0, 0.19);
   }

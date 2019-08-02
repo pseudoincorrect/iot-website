@@ -3,16 +3,20 @@
     <a (click)="toggleSidebar()" href="#" class="sidebar-toggle">
       <nb-icon icon="menu-2-outline"></nb-icon>
     </a>
-    <a class="logo" href="#" (click)="navigateHome()">IoT-<span>Engineer</span></a>
-    <nb-select [selected]="currentTheme" (selectedChange)="changeTheme($event)" status="primary">
-      <nb-option *ngFor="let theme of themes" [value]="theme.value"> {{ theme.name }}</nb-option>
-    </nb-select>
+    <a class="logo" href="#" (click)="navigateHome()"
+      >IoT-<span>Engineer</span></a
+    >
   </div>
 </div>
 
 <div class="header-container">
-  <button status="primary" nbButton outline>
-    <img src="assets/app_icons/download.png" alt="at" style="width:25px; height:25px;">
-    &nbsp;&nbsp; <b>CV</b>
-  </button>
+  <nb-select
+    [selected]="currentTheme"
+    (selectedChange)="changeTheme($event)"
+    status="primary"
+  >
+    <nb-option *ngFor="let theme of themes" [value]="theme.value">
+      {{ theme.name }}</nb-option
+    >
+  </nb-select>
 </div>
