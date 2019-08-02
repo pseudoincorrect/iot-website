@@ -2,6 +2,10 @@
 
 @include nb-install-component() {
 
+  .mainCard {
+    max-width: 620px;
+  }
+
   nb-card-header {
     text-align: center;
     font-size: nb-theme(text-heading-6-font-size);
@@ -17,4 +21,9 @@
     text-align: center;
     font-size: nb-theme(text-heading-6-font-size);
   }
+
+  // @media (max-width: 768px) {
+  //   .mainCard {
+  //     width: ;
+  //   }}
 }
