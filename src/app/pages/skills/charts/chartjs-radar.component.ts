@@ -20,20 +20,18 @@ export class ChartjsRadarComponent implements OnDestroy {
 
       this.data = {
         labels: [
-            'JavaScript / Typescript ',
-            'Python',
+            'JavaScript & TS',
             'C',
-            'C++',
-            'ASM',
-            'Matlab',
+            'Python',
             'Verilog',
-            'VHDL',
+            'HTML/CSS',
+            'Dart',
+            'Matlab',
+            'ASM',
             'Bash',
-            'PowerShell',
-            'HTML, CSS',
           ],
         datasets: [{
-          data: [90, 90, 90, 75, 65, 65, 90, 70, 70, 70, 80],
+          data: [95, 95, 90, 85, 85, 80, 70, 70, 79],
           label: 'Skills',
           borderColor: colors.danger,
           backgroundColor: NbColorHelper.hexToRgbA(colors.dangerLight, 0.5),
@@ -52,6 +50,7 @@ export class ChartjsRadarComponent implements OnDestroy {
         },
         scale: {
           ticks: {
+            display: false,
             fontColor: colors.fgText,
             backdropColor: colors.bg,
             stepSize: 20,

@@ -1,22 +1,22 @@
-<div class="row" (click)="this.collapseSidebarService.collapseSidebar()">
-  <div class="col-lg-12 chartSkills">
-    <nb-card>
-      <nb-card-header class="header">
-        <h3>Coding Skills</h3>
-      </nb-card-header>
-      <nb-card-body>
-        <ngx-chartjs-radar></ngx-chartjs-radar>
-      </nb-card-body>
-      <nb-card-footer class="footer">
-        Programming languages, Hardware Description Languages, Markup Languages,
-        Interpreters
-      </nb-card-footer>
-    </nb-card>
-  </div>
+<div class="container" (click)="this.collapseSidebarService.collapseSidebar()">
 
-  <div class="col chartSkills">
-    <div>
-      <nb-card>
+  <nb-card class="col-lg-12">
+    <nb-card-header class="header">
+      <h3>Coding Skills</h3>
+    </nb-card-header>
+    <nb-card-body class="radarChart">
+      <ngx-chartjs-radar></ngx-chartjs-radar>
+    </nb-card-body>
+    <nb-card-footer class="footer">
+      The main ones
+    </nb-card-footer>
+  </nb-card>
+
+  <div class="row">
+      
+    <div class="col-12 col-lg-6">
+      
+      <nb-card class="col-12">
         <nb-card-header class="header">
           <h3>Areas of Expertise</h3>
         </nb-card-header>
@@ -24,19 +24,23 @@
           <ngx-chartjs-pie></ngx-chartjs-pie>
         </nb-card-body>
       </nb-card>
-    </div>
-    <div>
-      <nb-card>
+
+      <nb-card class="col-12">
         <nb-card-header class="header">
           <h3>Notable Frameworks, Programing Tools and Hardware</h3>
         </nb-card-header>
         <nb-card-body>
-          <b>MEAN stack</b>
+          <b>Full Stack Development</b>
           <ul>
-            <li>Mongodb Database</li>
-            <li>Express Rest API</li>
             <li>Angular Frontend Framework</li>
+            <li>Express Rest API</li>
+            <li>SQL Database (Postgresql)</li>
+            <li>Mongodb Database</li>
             <li>NodeJs JavaScript runtime</li>
+          </ul>
+          <b>Cloud Computing</b>
+          <ul>
+            <li>AWS (Associate Developer Certified)</li>
           </ul>
           <b>Microcontroller/C programming Tooling</b>
           <ul>
@@ -64,7 +68,7 @@
           </ul>
           <b>Electronic Design Automation Software (PCB design)</b>
           <ul>
-            <li>Eagle (Cadsoft)</li>
+            <li>Eagle (Autodesk, Cadsoft)</li>
           </ul>
           <b>Testing</b>
           <ul>
@@ -75,10 +79,6 @@
           <ul>
             <li>Git</li>
           </ul>
-          <b>Deployment</b>
-          <ul>
-            <li>Heroku</li>
-          </ul>
           <b>Computer-Aided Design Software (CAD)</b>
           <ul>
             <li>Solidworks</li>
@@ -86,12 +86,12 @@
           </ul>
         </nb-card-body>
       </nb-card>
-    </div>
-  </div>
 
-  <div class="col">
-    <div>
-      <nb-card>
+    </div>
+
+    <div class="col-12 col-lg-6">
+
+      <nb-card class="col-12">
         <nb-card-header class="header">
           <h3>Areas of Expertise</h3>
         </nb-card-header>
@@ -128,9 +128,8 @@
           </ul>
         </nb-card-body>
       </nb-card>
-    </div>
-    <div>
-      <nb-card>
+
+      <nb-card class="col-12">
         <nb-card-header class="header">
           <h3>Operating Systems</h3>
         </nb-card-header>
@@ -139,16 +138,15 @@
             <li>Linux based systems, RPM and Debian</li>
             <li>OSX</li>
             <li>Windows</li>
-            <li>ChromeOS</li>
+            <li>ChromeOS (Curiosity stroke me)</li>
           </ul>
         </nb-card-body>
         <nb-card-footer class="footer">
           Comfortable with a terminal, Bash or PowerShell
         </nb-card-footer>
       </nb-card>
-    </div>
-    <div>
-      <nb-card>
+
+      <nb-card class="col-12">
         <nb-card-header class="header">
           <h3>Project Management</h3>
         </nb-card-header>
@@ -167,9 +165,8 @@
           </ul>
         </nb-card-body>
       </nb-card>
-    </div>
-    <div>
-      <nb-card>
+
+      <nb-card class="col-12">
         <nb-card-header class="header">
           <h3>Communication Skills</h3>
         </nb-card-header>
@@ -189,9 +186,8 @@
           </ul>
         </nb-card-body>
       </nb-card>
-    </div>
-    <div>
-      <nb-card>
+
+      <nb-card class="col-12">
         <nb-card-header class="header">
           <h3>Languages</h3>
         </nb-card-header>
@@ -199,6 +195,7 @@
           <ngx-chartjs-bar-horizontal></ngx-chartjs-bar-horizontal>
         </nb-card-body>
       </nb-card>
+
     </div>
   </div>
 </div>

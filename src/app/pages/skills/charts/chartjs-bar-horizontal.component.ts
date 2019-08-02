@@ -19,12 +19,12 @@ export class ChartjsBarHorizontalComponent implements OnDestroy {
       const chartjs: any = config.variables.chartjs;
 
       this.data = {
-        labels: ['French', 'English', 'Spanish'],
+        labels: ['French', 'English'],
         datasets: [{
             label: 'Dataset 1',
             backgroundColor: colors.infoLight,
             borderWidth: 1,
-            data: [100, 92, 30],
+            data: [100, 92],
           },
         ],
       };

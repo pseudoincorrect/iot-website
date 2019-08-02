@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component} from '@angular/core';
 
 @Component({
   selector: 'ngx-one-column-layout',
@@ -16,7 +16,6 @@ import { Component, OnInit } from '@angular/core';
       <nb-layout-column>
         <ng-content
           select="router-outlet"
-          ng-click="collapseSidebar()"
         ></ng-content>
       </nb-layout-column>
 
@@ -26,15 +25,7 @@ import { Component, OnInit } from '@angular/core';
     </nb-layout>
   `
 })
-export class OneColumnLayoutComponent implements OnInit {
+export class OneColumnLayoutComponent{
   constructor() {}
 
-  ngOnInit() {
-    console.log('on init');
-  }
-
-  collapseSidebar() {
-    console.log('button clicked');
-    // this.nbSidebarService.collapse();
-  }
 }
