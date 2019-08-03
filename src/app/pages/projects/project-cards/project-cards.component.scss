@@ -2,6 +2,10 @@
 
 @include nb-install-component() {
 
+  b {
+    color: nb-theme(color-success-400);
+  }
+
   nb-card-body {
     display: flex;
     flex-direction: column;

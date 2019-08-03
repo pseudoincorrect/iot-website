@@ -2,18 +2,53 @@
 
 @include nb-install-component() {
 
-  .pict {
-    float: none;
-    margin: 20px;
+  .lastP {
+    margin-bottom: 0;
+  }
+
+  .success b {
+    color: nb-theme(color-success-400);
+  }
+
+  .primary b,
+  .successb {
+    color: nb-theme(color-primary-400);
+  }
+
+  .center-block {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+
+  nb-alert p {
+    text-align: justify;
+    text-justify: inter-word;
+  }
+
+  .iot {
+    font-size: 2rem;
+  }
+
+  .pict,
+  .pictiot {
     border-radius: 50%;
     object-fit: cover;
-    width: 150px;
-    height: 150px;
     box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2), 0 8px 20px 0 rgba(0, 0, 0, 0.19);
   }
 
+  .pict {
+    width: 200px;
+    height: 200px;
+    margin: 20px 0 30px 0;
+  }
+
+  .pictiot {
+    width: 180px;
+    height: 180px;
+  }
+
   .title {
-    text-align: center;
     font-size: nb-theme(text-heading-1-font-size);
   }
 
@@ -48,7 +83,7 @@
   .sign {
     margin: 15px;
     font-size: nb-theme(text-heading-1-font-size);
-    text-shadow: 2px 2px rgba(0, 0, 0, 0.2), 4px 4px rgba(0, 0, 0, 0.18);
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.2);
   }
 
   .smallImg .sign {
@@ -70,6 +105,10 @@
 
   @media (max-width: 768px) {
 
+    .iot {
+      font-size: 1rem;
+    }
+
     .title {
       font-size: nb-theme(text-heading-5-font-size);
     }
@@ -80,14 +119,6 @@
 
     .bigImg {
       display: none;
-    }
-  }
-
-  @media (max-width: 768px) {
-
-    .pict {
-      float: none;
-      margin: 20px;
     }
   }
 }

@@ -4,6 +4,10 @@
 
 @include nb-install-component() {
 
+  b {
+    color: nb-theme(color-success-400);
+  }
+
   .timeline-body {
     text-align: justify;
   }

@@ -5,15 +5,20 @@
   .mainCard {
     max-width: 620px;
   }
-
+  
   nb-card-header {
     text-align: center;
     font-size: nb-theme(text-heading-6-font-size);
   }
-
+  
   nb-card-body {
+    color: nb-theme(color-primary-400);
     font-size: nb-theme(text-heading-5-font-size);
     text-align: center;
+  }
+
+  nb-card-body img {
+    color: nb-theme(color-primary-400);
   }
 
   nb-card-footer {

@@ -1,14 +1,15 @@
 <div class="container" (click)="this.collapseSidebarService.collapseSidebar()">
-  <nb-alert outline="primary">
+ 
+  <nb-alert outline="primary" style="padding: 30px">
     <div class="row justify-content-center">
-      <div class="col-12" style="margin: 20px;">
-        <p class="title">Need <b>IoT</b> in Your Projects ?</p>
+      <div class="col-12">
+        <p class="title" style="text-align: center;">Need <b class="successb">IoT</b> in Your Projects ?</p>
         <br />
-        <p class="title">I can help with that!</p>
+        <p class="title" style="text-align: center;">I can help with that!</p>
       </div>
     </div>
     <br />
-    <div class="justify-content-center smallImg">
+    <div class="row justify-content-center smallImg">
       <div class="col-12">
         <div>
           <img class="mainImg" src="assets/home/board.jpg" />
@@ -35,26 +36,24 @@
         </div>
       </div>
     </div>
-    <br />
   </nb-alert>
-  <br />
-  <br />
-  <br />
 
-  <div style="text-align: center">
+  <div style="text-align: center; margin: 100px 0;">
     <h2>Bonjour!</h2>
-    <img class="pict" src="assets/home/max_pict.jpg" />
+    <img class="pict" src="assets/home/max_pict.jpg"/> <br>
     <p>Maxime here, a french IoT (Internet of Things) Engineer.</p>
     <p>
       You may have noticed the huge title up there with this catchy acronyme :
-      <a href="https://en.wikipedia.org/wiki/Internet_of_things" target="_blank"
-      style="font-size: 2rem"
+      <a
+        class="iot"
+        href="https://en.wikipedia.org/wiki/Internet_of_things"
+        target="_blank"
         >IoT</a
       >
     </p>
-    <br />
   </div>
-  <nb-alert outline="success">
+
+  <nb-alert outline="success" class="success">
     <p>Well, what is <b>IoT</b> then ?</p>
     <blockquote class="blockquote">
       <p class="mb-0">
@@ -72,23 +71,50 @@
       </footer>
     </blockquote>
     <h6>
-      TLDR; IoT represents technologies behind devices (electronic) connected to
-      internet.
+      TLDR; <b>
+      	IoT represents technologies behind [electronic] devices connected to
+      	internet.
+      </b>
     </h6>
     <br />
-    <p>Few examples:</p>
-    <ul>
-      <li>Wristwaches monitoring with data stored online</li>
-      <li>Remote controlled lamps, Hi-Fi, thermostats</li>
-      <li>Connected sensors in factories for maintenance applications</li>
-      <li>Online Package tracking</li>
-      <li>Smart cars</li>
-      <li>Sensors on power grid for energy distribution overview</li>
-      <li>Many mixes of physical devices and web applications</li>
-      <li>...</li>
-    </ul>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-8 col-lg-7">
+          <p>Few examples:</p>
+          <ul>
+            <li>Wristwaches monitoring with data stored online</li>
+            <li>Remote controlled lamps, Hi-Fi, thermostats</li>
+            <li>Connected sensors in factories for maintenance applications</li>
+            <li>Online Package tracking</li>
+            <li>Smart cars</li>
+            <li>Sensors on power grid for energy distribution overview</li>
+            <li>Many mixes of physical devices and web applications</li>
+            <li>...</li>
+          </ul>
+        </div>
+        <div class="col-12 col-md-4 col-lg-5 d-flex justify-content-center align-items-center">
+          <img class="pictiot" src="assets/home/echo_dot.jpg" />
+        </div>
+      </div>
+    </div>
   </nb-alert>
-  <nb-alert outline="primary">
+
+  <nb-alert outline="primary" class="primary">
     <p>It happens that I have been working in this domain since 2014.</p>
+    <p>most of the projects i took were focused around creating a <b>custom physical device</b> and connect it either to a local computer or to a <b>cloud application</b> for data <b>processing/presenting</b>.</p>
+    <p>A typical application involves designing and implementing:</p>
+    <ul>
+      <li>One or multiple Electronic Circuit</li>
+      <li>The firmware of this device</li>
+      <li>Optionaly: A gateway firware (bridge between the embedded System and the cloud application)</li>
+      <li>A Web application (backend and frontend)</li>
+    </ul>
+    <p class="lastP">Naturally, a large variety of tools and programming are involved in this process. I mainly use <b>C</b> for firmware programming, <b>Javascript</b> for the frontend and backend development, along with <b>HTML5/CSS3</b>, <b>AWS</b> for the deployment and CI/CD, <b>Eagle</b> for the Printed Circuit Board design, <b>Verilog</b> when FPGAs are involved, <b>Python</b> for scripting, DSP prototyping, algorithms design, and finaly <b>Dart/Flutter</b> for mobile application development.</p>
+  </nb-alert>
+
+  <nb-alert outline="success" class="success">
+    <p class="lastP">
+      The <a href="./pages/projects"><b>projects</b></a> page gives a deeper overview of the kind of work I usualy do along with the <a href="./pages/skills"><b>skills</b></a> page for the tooling.
+    </p>
   </nb-alert>
 </div>
