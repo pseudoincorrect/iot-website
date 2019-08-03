@@ -1,52 +1,94 @@
 <div class="container" (click)="this.collapseSidebarService.collapseSidebar()">
- 
-  <div class="row justify-content-center">
-    <div class="col-12" style="margin: 20px;">
-      <p class="title">Need <b>IoT</b> in Your Projects ?</p>
-      <br>
-      <p class="title">I can help with that</p>
-    </div>
-  </div>
-
-  <div class="justify-content-center smallImg">
-    <div class="col-12">
-      <div>
-        <img class="mainImg" src="assets/home/board.jpg" />
-      </div>
-      <div class="sign">+</div>
-      <div>
-        <img class="mainImg" src="assets/home/earth.jpg" />
-      </div>
-      <div class="sign">=</div>
-      <div>
-        <img class="mainImg" src="assets/home/iot.jpg" />
+  <nb-alert outline="primary">
+    <div class="row justify-content-center">
+      <div class="col-12" style="margin: 20px;">
+        <p class="title">Need <b>IoT</b> in Your Projects ?</p>
+        <br />
+        <p class="title">I can help with that!</p>
       </div>
     </div>
-  </div>
-
-  <div class="col-12 bigImg">
-    <div class="row align-item-center">
-      <div class="d-flex" style="vertical-align: middle;">
-        <img class="flex-fill mainImg" src="assets/home/board.jpg" />
-        <div class="flex-fill sign">+</div>
-        <img class="flex-fill mainImg" src="assets/home/earth.jpg" />
-        <div class="flex-fill sign">=</div>
-        <img class="flex-fill mainImg" src="assets/home/iot.jpg" />
+    <br />
+    <div class="justify-content-center smallImg">
+      <div class="col-12">
+        <div>
+          <img class="mainImg" src="assets/home/board.jpg" />
+        </div>
+        <div class="sign">+</div>
+        <div>
+          <img class="mainImg" src="assets/home/earth.jpg" />
+        </div>
+        <div class="sign">=</div>
+        <div>
+          <img class="mainImg" src="assets/home/iot.jpg" />
+        </div>
       </div>
     </div>
+
+    <div class="col-12 bigImg">
+      <div class="row align-item-center">
+        <div class="d-flex" style="vertical-align: middle;">
+          <img class="flex-fill mainImg" src="assets/home/board.jpg" />
+          <div class="flex-fill sign">+</div>
+          <img class="flex-fill mainImg" src="assets/home/earth.jpg" />
+          <div class="flex-fill sign">=&gt;</div>
+          <img class="flex-fill mainImg" src="assets/home/iot.jpg" />
+        </div>
+      </div>
+    </div>
+    <br />
+  </nb-alert>
+  <br />
+  <br />
+  <br />
+
+  <div style="text-align: center">
+    <h2>Bonjour!</h2>
+    <img class="pict" src="assets/home/max_pict.jpg" />
+    <p>Maxime here, a french IoT (Internet of Things) Engineer.</p>
+    <p>
+      You may have noticed the huge title up there with this catchy acronyme :
+      <a href="https://en.wikipedia.org/wiki/Internet_of_things" target="_blank"
+      style="font-size: 2rem"
+        >IoT</a
+      >
+    </p>
+    <br />
   </div>
-
-  <hr>
-
-  <h2> Bonjour ! </h2> 
-  <p> Maxime here, a french IoT (Internet of Things) Engineer. </p>
-  <p> You clicked your way through here. It can mean few things:</p>
-  <ol>
-    <li>You have interest in IoT or engineering</li>
-    <li>Your a colleague, a friend or an acquitance</li>
-    <li>You lost your way through the Web (it happens to me all the time don't worry)</li>
-  </ol>
-  <p>Welcome !</p>
-  <p>You may have noticed the huge title up there with this rather catchy acronyme : <b>IoT</b>.</p>
-  <p></p>
+  <nb-alert outline="success">
+    <p>Well, what is <b>IoT</b> then ?</p>
+    <blockquote class="blockquote">
+      <p class="mb-0">
+        <i>
+          The Internet of things (IoT) is the extension of
+          <b>Internet connectivity</b> into physical
+          <b>devices and everyday objects</b>. Embedded with electronics,
+          Internet connectivity, and other forms of hardware (such as sensors),
+          these devices can communicate and interact with others over the
+          Internet, and they can be <b>remotely monitored and controlled</b>
+        </i>
+      </p>
+      <footer class="blockquote-footer  text-center">
+        Wikipedia, <cite title="Source Title">Internet of things</cite>
+      </footer>
+    </blockquote>
+    <h6>
+      TLDR; IoT represents technologies behind devices (electronic) connected to
+      internet.
+    </h6>
+    <br />
+    <p>Few examples:</p>
+    <ul>
+      <li>Wristwaches monitoring with data stored online</li>
+      <li>Remote controlled lamps, Hi-Fi, thermostats</li>
+      <li>Connected sensors in factories for maintenance applications</li>
+      <li>Online Package tracking</li>
+      <li>Smart cars</li>
+      <li>Sensors on power grid for energy distribution overview</li>
+      <li>Many mixes of physical devices and web applications</li>
+      <li>...</li>
+    </ul>
+  </nb-alert>
+  <nb-alert outline="primary">
+    <p>It happens that I have been working in this domain since 2014.</p>
+  </nb-alert>
 </div>

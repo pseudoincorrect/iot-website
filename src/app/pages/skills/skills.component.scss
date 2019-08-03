@@ -2,6 +2,10 @@
 
 @include nb-install-component() {
 
+  ngx-chartjs-radar {
+    padding: 15px;
+  }
+
   ngx-chartjs-pie,
   ngx-chartjs-radar {
     display: block;
