@@ -38,7 +38,7 @@ export class ChartjsPieComponent implements OnDestroy {
           labels: {
             render: 'label',
             fontSize: 15,
-            fontColor: '#fff',
+            fontColor: 'white',
             fontStyle: 'bold',
           },
         },
