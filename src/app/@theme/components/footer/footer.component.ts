@@ -5,11 +5,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./footer.component.scss'],
   template: `
     <span class="created-by">Thanks <b><a href="https://akveo.com" target="_blank">Akveo</a></b></span>
-    <span>
-      maximeclemlent6
-      <img src="assets/app_icons/at-sign.png" alt="at" style="width:25px;height:25px;">
-      gmail.com
-    </span>
+    <div class="socials">
+      <a href="./pages/contacts" target="_blank" class="ion ion-email ng-star-inserted"></a>
+      <a href="https://www.linkedin.com/in/maximeclement-iot/" target="_blank" class="ion ion-social-linkedin" style="margin-left: 10px;"></a>
+    </div>
   `,
 })
 export class FooterComponent {
