@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CvComponent } from './cv.component';
 import { ThemeModule } from '../../@theme/theme.module';
-import { NbCardModule } from '@nebular/theme';
+import { NbCardModule, NbAccordionModule } from '@nebular/theme';
 
 @NgModule({
   declarations: [
@@ -10,6 +10,7 @@ import { NbCardModule } from '@nebular/theme';
   ],
   imports: [
     NbCardModule,
+    NbAccordionModule,
     ThemeModule,
     CommonModule,
   ],
