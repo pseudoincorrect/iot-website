@@ -1,5 +1,6 @@
 import { Component, OnDestroy } from '@angular/core';
 import { NbThemeService } from '@nebular/theme';
+import 'chart.js';
 import 'chartjs-plugin-labels';
 
 @Component({
@@ -28,9 +29,9 @@ export class ChartjsPieComponent implements OnDestroy {
         datasets: [
           {
             data: [130, 100, 80, 80],
-            borderAlign: 'inner',
-            backgroundColor: 'rgba(0, 0, 0, 0.2)',
-            borderColor: [
+            borderAlign: 'center',
+            borderColor: 'rgba(0, 0, 0, 0.2)',
+            backgroundColor: [
               colors.primaryLight,
               colors.infoLight,
               colors.successLight,
