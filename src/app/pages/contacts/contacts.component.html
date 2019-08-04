@@ -1,15 +1,23 @@
 <div
   class="row justify-content-center"
-  (click)="this.collapseSidebarService.collapseSidebar()">
+  (click)="this.collapseSidebarService.collapseSidebar()"
+>
   <nb-card class=" col-12 col-sm-9 col-ld-8 col-xl-7 mainCard">
     <nb-card-header>
-      Don't hesitate to drop a message ! <br/>
+      Don't hesitate to drop a message ! <br />
       I'm always interested to discuss & help on inovative projects !
     </nb-card-header>
     <nb-card-body>
-        maximeclement6
-        <nb-icon icon="at-outline"></nb-icon>
-        gmail.com
+      maximeclement6@gmail.com &nbsp;&nbsp;
+      <button
+        nbButton
+        outline
+        (click)="copyMessage('maximeclement6@gmail.com')"
+        value="click to copy"
+        size="tiny"
+      >
+        <nb-icon icon="copy-outline"></nb-icon>
+      </button>
     </nb-card-body>
     <nb-card-footer>
       <img src="assets/app_icons/email.svg" alt="email" style="height:200px;" />
