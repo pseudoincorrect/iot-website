@@ -35,8 +35,8 @@ export class ContactsComponent implements OnInit, OnDestroy {
       { position, status });
   }
 
-  copyMessage(val: string){
-    let selBox = document.createElement('textarea');
+  copyMessage(val: string) {
+    const selBox = document.createElement('textarea');
     selBox.style.position = 'fixed';
     selBox.style.left = '0';
     selBox.style.top = '0';
