@@ -2,6 +2,10 @@
 
 @include nb-install-component() {
 
+  .typicalApp {
+    margin: 20px 0;
+  }
+
   .lastP {
     margin-bottom: 0;
   }
@@ -29,8 +33,15 @@
     font-size: 2rem;
   }
 
+  .pictIotDiagram {
+    border-radius: 8px;
+    width: 95%;
+    object-fit: cover;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2), 0 8px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
   .pict,
-  .pictiot {
+  .pictIot {
     border-radius: 50%;
     object-fit: cover;
     box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2), 0 8px 20px 0 rgba(0, 0, 0, 0.19);
@@ -42,7 +53,7 @@
     margin: 20px 0 30px 0;
   }
 
-  .pictiot {
+  .pictIot {
     width: 180px;
     height: 180px;
   }
