@@ -10,8 +10,7 @@
     color: nb-theme(color-success-400);
   }
 
-  .primary b,
-  .successb {
+  .primary b {
     color: nb-theme(color-primary-400);
   }
 
@@ -49,7 +48,12 @@
   }
 
   .title {
-    font-size: nb-theme(text-heading-1-font-size);
+    font-size: 3rem;
+    line-height: 5rem;
+  }
+
+  .title b {
+    color: nb-theme(color-primary-400);
   }
 
   .smallImg {
@@ -110,7 +114,8 @@
     }
 
     .title {
-      font-size: nb-theme(text-heading-5-font-size);
+      font-size: nb-theme(text-heading-4-font-size);
+      line-height: 2.5rem;
     }
 
     .smallImg {

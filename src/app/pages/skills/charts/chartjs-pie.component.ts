@@ -44,9 +44,8 @@ export class ChartjsPieComponent implements OnDestroy {
         plugins: {
           labels: {
             render: 'label',
-            fontSize: 15,
-            fontColor: 'white',
-            fontStyle: 'bold'
+            fontSize: 16,
+            fontColor: 'white'
           }
         },
         maintainAspectRatio: false,
