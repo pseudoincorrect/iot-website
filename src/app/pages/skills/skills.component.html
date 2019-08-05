@@ -1,18 +1,7 @@
 <div class="container" (click)="this.collapseSidebarService.collapseSidebar()">
   <div class="row justify-content-center">
-    <div class="col-12 col-lg-7">
-      <nb-card>
-        <nb-card-header class="header">
-          <h3>Coding Skills</h3>
-        </nb-card-header>
-        <nb-card-body class="radarChart">
-          <ngx-chartjs-radar></ngx-chartjs-radar>
-        </nb-card-body>
-      </nb-card>
-    </div>
-
     <div class="col-12 col-lg-6">
-      <nb-card>
+      <nb-card id="chartExpertise">
         <nb-card-header class="header">
           <h3>Areas of Expertise</h3>
         </nb-card-header>
@@ -21,7 +10,7 @@
         </nb-card-body>
       </nb-card>
 
-      <nb-card>
+      <nb-card id="framework">
         <nb-card-header class="header">
           <h3>Notable Frameworks, Programing Tools and Hardware</h3>
         </nb-card-header>
@@ -34,52 +23,78 @@
             <li>NoSQL Database (MongoDb)</li>
             <li>NodeJs JavaScript runtime</li>
           </ul>
+
           <b>Cloud Computing</b>
           <ul>
             <li>AWS (Associate Developer Certified)</li>
           </ul>
-          <b>Microcontroller/C programming Tooling</b>
+
+          <b>Embedded Systems</b>
           <ul>
-            <li>Ceedling (C testing): Unity + Cmock + CException)</li>
-            <li>Keil</li>
-            <li>Eclipse + GCC + OpenOCD + freeRTOS</li>
-            <li>Segger Embedded Studio</li>
-            <li>Em::blocks</li>
-            <li>MP lab</li>
-            <li>Arduino</li>
-            <li>Mbed</li>
-            <li>System Workbench for STM32</li>
+            <li>
+              Wireless Microcontrollers
+              <ul>
+                <li>Nordic Semiconductor (Bluetooth and Thread)</li>
+                <li>Texas Instrument (Wifi)</li>
+                <li>Microchip (Bluetooth)</li>
+              </ul>
+            </li>
+            <li>
+              Regular Microcontrollers
+              <ul>
+                <li>ST Microelectronics</li>
+                <li>Atmel</li>
+                <li>Microchip PIC</li>
+                <li>NXP</li>
+                <li>Arduino and Mbed</li>
+              </ul>
+            </li>
+            <li>
+              FPGAs
+              <ul>
+                <li>Intel FPGA + Quartus / ModelSim</li>
+                <li>Intel Nios II Soft Processor</li>
+              </ul>
+            </li>
+            <li>
+              Single Board Computers
+              <ul>
+                <li>Odroid</li>
+                <li>Raspberry Pi</li>
+              </ul>
+            </li>
           </ul>
-          <b>Hardware Vendor</b>
-          <ul>
-            <li>ST Microelectronics</li>
-            <li>Nordic Semiconductor</li>
-            <li>Atmel</li>
-            <li>Microchip PIC</li>
-            <li>NXP</li>
-            <li>NIOS II (Soft CPU written in Verilog)</li>
-            <li>FPGA tooling</li>
-            <li>Intel FPGA + Quartus / ModelSim</li>
-            <li>Intel Nios II Soft Processor</li>
-          </ul>
-          <b>Electronic Design Automation Software (PCB design)</b>
-          <ul>
-            <li>Eagle (Autodesk, Cadsoft)</li>
-          </ul>
+
           <b>Testing</b>
           <ul>
             <li>C Programming: Ceedling: Unity + Cmock + CException)</li>
             <li>Javascript: Jest, Jasmin, Karma</li>
           </ul>
+
+          <b>Compiling and programming Tooling</b>
+          <ul>
+            <li>VScode + GCC + Vendor Flashing/Debug tools</li>
+            <li>Keil, Segger Embedded Studio, Code Composer Studio</li>
+            <li>Many other proprietry IDE</li>
+            <li>Ask me about it</li>
+          </ul>
+
+          <b>Electronic Design Automation Software (PCB design)</b>
+          <ul>
+            <li>Eagle (Autodesk, Cadsoft)</li>
+          </ul>
+
           <b>Versioning and Collaborative Software</b>
           <ul>
             <li>Git</li>
           </ul>
+
           <b>Computer-Aided Design Software (CAD)</b>
           <ul>
             <li>Solidworks</li>
             <li>Catia</li>
           </ul>
+
           <b>Operating Systems</b>
           <ul>
             <li>Linux Distros, RPM and Debian</li>
@@ -92,7 +107,7 @@
     </div>
 
     <div class="col-12 col-lg-6">
-      <nb-card>
+      <nb-card id="expertise">
         <nb-card-header class="header">
           <h3>Areas of Expertise (details)</h3>
         </nb-card-header>
@@ -105,30 +120,33 @@
             <li>Software automation</li>
             <li>Deployment</li>
           </ul>
-          <p><strong>Embedded Systems Firmware</strong></p>
+          <p><strong>Embedded Systems and Firmware programming</strong></p>
           <ul>
             <li>
-              Wireless communications (Bluetooth, WiFi, Zigbee, Thread,
-              Proprietary)
+              <b>Wireless communications protocols</b>
+              <ul>
+                <li>Bluetooth</li>
+                <li>Wifi</li>
+                <li>Thread 802.15.04</li>
+                <li>Lora</li>
+                <li>Proprietary</li>
+              </ul>
             </li>
             <li>Low power, Ultra low power applications</li>
-            <li>Microcontrollers</li>
-            <li>Real Time Operating Systems</li>
+            <li>Microcontrollers and FPGAs</li>
+            <li>Digital Signal Processing</li>
           </ul>
           <p><strong>Hardware and Digital Systems Design</strong></p>
           <ul>
-            <li>FPGA (hardware acceleration)</li>
-            <li>Printed Circuit Board Design</li>
-            <li>Printed Circuit Board Manufacturing (Laser CNC)</li>
+            <li>Printed Circuit Board (PCB) Design</li>
+            <li>PCB Manufacturing (with Laser CNC)</li>
             <li>Micro soldering</li>
             <li>Prototyping</li>
-            <li>Digital Signal Processing</li>
-            <li>Circuit simulation</li>
           </ul>
           <p><strong>Project Management</strong></p>
           <ul>
-            <li>Managed multiple projects (researcher and studients)</li>
-            <li>Financial studies made for our each of our projects</li>
+            <li>Managed multiple projects</li>
+            <li>Budget analysis for each of them</li>
             <li>Kanban methods are my pick</li>
             <li>Agile CI/CD centered methods for the development parts</li>
             <li>Regular in report writing</li>
@@ -136,7 +154,16 @@
         </nb-card-body>
       </nb-card>
 
-      <nb-card>
+      <nb-card id="chartCoding">
+        <nb-card-header class="header">
+          <h3>Coding Skills</h3>
+        </nb-card-header>
+        <nb-card-body class="radarChart">
+          <ngx-chartjs-radar></ngx-chartjs-radar>
+        </nb-card-body>
+      </nb-card>
+
+      <nb-card id="communication">
         <nb-card-header class="header">
           <h3>Communication Skills</h3>
         </nb-card-header>
@@ -157,7 +184,7 @@
         </nb-card-body>
       </nb-card>
 
-      <nb-card>
+      <nb-card id="language">
         <nb-card-header class="header">
           <h3>Languages</h3>
         </nb-card-header>
@@ -165,7 +192,6 @@
           <ngx-chartjs-bar-horizontal></ngx-chartjs-bar-horizontal>
         </nb-card-body>
       </nb-card>
-
     </div>
   </div>
 </div>

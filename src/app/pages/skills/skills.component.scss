@@ -2,14 +2,13 @@
 
 @include nb-install-component() {
 
-  ngx-chartjs-radar {
-    padding: 15px;
-  }
+  // ngx-chartjs-radar {
+  //   padding: 15px;
+  // }
 
   ngx-chartjs-pie,
   ngx-chartjs-radar {
     display: block;
-    height: nb-theme(card-height-medium);
     width: 100%;
 
     ::ng-deep chart {
@@ -17,7 +16,14 @@
       height: 100%;
       width: 100%;
     }
+  }
 
+  ngx-chartjs-pie {
+    height: 25rem;
+  }
+
+  ngx-chartjs-radar {
+    height: 22rem;
   }
 
   .header .footer {
@@ -27,7 +33,7 @@
   nb-card-header {
     text-align: center;
   }
-
+  
   @media (max-width: 768px) {
 
     .radarChart {
