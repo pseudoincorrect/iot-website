@@ -28,7 +28,7 @@ export class ChartjsPieComponent implements OnDestroy {
         ],
         datasets: [
           {
-            data: [130, 100, 80, 80],
+            data: [100, 100, 90, 80],
             borderAlign: 'center',
             borderColor: 'rgba(0, 0, 0, 0.2)',
             backgroundColor: [
