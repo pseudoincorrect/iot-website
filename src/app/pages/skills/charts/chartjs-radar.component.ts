@@ -31,7 +31,7 @@ export class ChartjsRadarComponent implements OnDestroy {
             'Bash',
           ],
         datasets: [{
-          data: [95, 95, 90, 85, 85, 80, 70, 70, 79],
+          data: [85, 95, 90, 75, 75, 90, 70, 70, 71],
           label: 'Skills',
           borderColor: colors.danger,
           backgroundColor: NbColorHelper.hexToRgbA(colors.dangerLight, 0.5),
